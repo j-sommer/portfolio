@@ -1,0 +1,17 @@
+@import './../../../../theme.scss';
+
+:host {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.contact-square {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: mat-color($portfolio-primary);
+}

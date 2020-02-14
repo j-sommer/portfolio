@@ -1,4 +1,6 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
+
+import { ContactProvider } from "../contact-provider";
 
 @Component({
   selector: "app-contact-square",
@@ -7,5 +9,12 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class ContactSquareComponent {
   @Input()
-  targetUrl: string;
+  public targetUrl: string;
+
+  @Input()
+  public contactProvider: ContactProvider;
+
+  public onClick(): void {
+    window.location.href = this.targetUrl;
+  }
 }

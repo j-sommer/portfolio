@@ -1,12 +1,35 @@
 <div id="contact-list">
-  <mat-grid-list cols="4" rowHeight="2:1">
+  <mat-grid-list
+    cols="4"
+    rowHeight="1:1"
+    [gutterSize]="'10px'"
+    style="flex-grow: 1;"
+  >
     <mat-grid-tile>
-      <app-contact-square></app-contact-square>
+      <app-contact-square
+        [targetUrl]="'https://www.google.com'"
+        [contactProvider]="ContactProvider.Twitter"
+      ></app-contact-square>
     </mat-grid-tile>
     <mat-grid-tile>
-      <app-contact-square></app-contact-square>
+      <app-contact-square
+        [targetUrl]="'https://www.google.com'"
+        [contactProvider]="ContactProvider.GitHub"
+      ></app-contact-square>
     </mat-grid-tile>
-    <mat-grid-tile> <app-contact-square> </app-contact-square></mat-grid-tile>
-    <mat-grid-tile> <app-contact-square> </app-contact-square> </mat-grid-tile>
+    <mat-grid-tile>
+      <app-contact-square
+        [targetUrl]="'https://www.google.com'"
+        [contactProvider]="ContactProvider.LinkedIn"
+      >
+      </app-contact-square
+    ></mat-grid-tile>
+    <mat-grid-tile>
+      <app-contact-square
+        [targetUrl]="'https://www.google.com'"
+        [contactProvider]="ContactProvider.CodePen"
+      >
+      </app-contact-square>
+    </mat-grid-tile>
   </mat-grid-list>
 </div>
