@@ -1,3 +1,9 @@
-<div class="contact-square" (click)="onClick()">
-  <fa-icon [icon]="['fab', contactProvider]" size="lg"></fa-icon>
+<div
+  class="contact-square"
+  (click)="onClick()"
+  (mouseover)="isHovering = true"
+  (mouseout)="isHovering = false"
+  [@hover]="isHovering ? 'hoverIn' : 'hoverOut'"
+>
+  <fa-icon class="contact-provider-icon" [icon]="['fab', contactProvider]" size="lg"></fa-icon>
 </div>
