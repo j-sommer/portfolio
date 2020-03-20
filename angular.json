@@ -25,6 +25,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
+              "./node_modules/aos/dist/aos.css",
               "src/styles.scss",
               "src/theme.scss"
             ],
@@ -93,9 +94,7 @@
               "src/assets",
               "src/manifest.webmanifest"
             ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "styles": ["src/styles.scss"],
             "scripts": []
           }
         },
@@ -107,9 +106,7 @@
               "tsconfig.spec.json",
               "e2e/tsconfig.json"
             ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {

@@ -1,0 +1,14 @@
+
+@keyframes fadeIn{
+  0%{
+      opacity: 0;
+      }
+  100%{
+      transform: rotate(xx);
+      opacity: 1;
+      }
+}
+
+.legal-notice-container{
+  animation: fadeIn 500ms 0s linear;
+}
