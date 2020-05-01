@@ -52,6 +52,7 @@
     "karma-jasmine-html-reporter": "^1.4.0",
     "protractor": "~5.4.0",
     "testcafe": "^1.8.4",
+    "testcafe-angular-selectors": "^0.4.1",
     "testcafe-reporter-html": "^1.4.6",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
