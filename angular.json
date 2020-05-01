@@ -110,15 +110,17 @@
           }
         },
         "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+          "builder": "@politie/angular-testcafe-builder:testcafe",
           "options": {
-            "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "portfolio:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "portfolio:serve:production"
-            }
+            "browsers": [
+              "firefox"
+            ],
+            "src": "e2e/*/*.spec.ts",
+            "reporters": [
+              {
+                "name": "spec"
+              }
+            ]
           }
         }
       }
