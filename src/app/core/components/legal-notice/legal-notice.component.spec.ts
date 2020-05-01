@@ -1,16 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatCardModule } from "@angular/material/card";
+import { MatGridListModule } from "@angular/material/grid-list";
+import { MockModule } from "ng-mocks";
 
-import { LegalNoticeComponent } from './legal-notice.component';
+import { LegalNoticeComponent } from "./legal-notice.component";
 
-describe('LegalNoticeComponent', () => {
+describe("LegalNoticeComponent", () => {
   let component: LegalNoticeComponent;
   let fixture: ComponentFixture<LegalNoticeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LegalNoticeComponent ]
-    })
-    .compileComponents();
+      declarations: [LegalNoticeComponent],
+      imports: [MockModule(MatCardModule), MockModule(MatGridListModule)],
+    }).compileComponents();
   }));
 
   beforeEach(() => {
@@ -19,7 +22,7 @@ describe('LegalNoticeComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
