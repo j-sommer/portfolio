@@ -8,7 +8,7 @@ import {
   transition,
   animate,
   query,
-  animateChild
+  animateChild,
 } from "@angular/animations";
 
 @Component({
@@ -25,9 +25,9 @@ import {
       ),
       state("hoverOut", style({})),
       transition("hoverIn => hoverOut", [animate("0.3s")]),
-      transition("hoverOut => hoverIn", [animate("0.5s")])
-    ])
-  ]
+      transition("hoverOut => hoverIn", [animate("0.5s")]),
+    ]),
+  ],
 })
 export class ContactSquareComponent {
   @Input()
