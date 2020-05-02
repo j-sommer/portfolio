@@ -18,5 +18,8 @@ steps:
 - script: |
     npm install -g @angular/cli
     npm install
+  displayName: 'Install Dependencies'
+- script: |
     ng test
-  displayName: 'npm install and test'
+  displayName: 'Run Unit Tests'
+
