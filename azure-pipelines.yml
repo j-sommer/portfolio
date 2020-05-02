@@ -23,5 +23,6 @@ steps:
     ng test
   displayName: 'Run Unit Tests'
 - script: |
+    ng serve
     ng e2e
   displayName: 'Run E2E Tests'
