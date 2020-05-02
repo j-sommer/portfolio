@@ -115,9 +115,9 @@
           "builder": "@politie/angular-testcafe-builder:testcafe",
           "options": {
             "browsers": [
-              "firefox"
+              "firefox:headless"
             ],
-            "src": "e2e/*/*.spec.ts",
+            "src": "e2e/**/*.spec.ts",
             "reporters": [
               {
                 "name": "spec"
