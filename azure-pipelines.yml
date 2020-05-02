@@ -22,4 +22,6 @@ steps:
 - script: |
     ng test
   displayName: 'Run Unit Tests'
-
+- script: |
+    ng e2e
+  displayName: 'Run E2E Tests'
