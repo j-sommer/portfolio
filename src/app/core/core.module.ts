@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { TranslateModule } from "@ngx-translate/core";
 
 import { RoutingModule } from "../routing/routing.module";
 import { HeaderComponent } from "./components/header/header.component";
@@ -15,8 +16,9 @@ import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.com
     MatToolbarModule,
     MatCardModule,
     MatButtonModule,
-    RoutingModule
+    RoutingModule,
+    TranslateModule,
   ],
-  exports: [HeaderComponent]
+  exports: [HeaderComponent],
 })
 export class CoreModule {}
