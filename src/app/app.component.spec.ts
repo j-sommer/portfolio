@@ -5,6 +5,7 @@ import { MockComponents } from "ng-mocks";
 import { AppComponent } from "./app.component";
 import { HeaderComponent } from "./core/components/header/header.component";
 import { FooterComponent } from "./footer/footer.component";
+import { TranslateModule } from "@ngx-translate/core";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -13,7 +14,7 @@ describe("AppComponent", () => {
         AppComponent,
         MockComponents(HeaderComponent, FooterComponent),
       ],
-      imports: [RouterTestingModule],
+      imports: [RouterTestingModule, TranslateModule.forRoot()],
     }).compileComponents();
   }));
 
