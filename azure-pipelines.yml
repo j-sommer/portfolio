@@ -36,4 +36,4 @@ steps:
     inputs:
       command: 'custom'
       workingDir: './'
-      customCommand: 'e2e'
+      customCommand: 'run e2e'
