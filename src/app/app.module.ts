@@ -8,6 +8,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { environment } from "../environments/environment";
 import { AppComponent } from "./app.component";
+import { ContactModule } from "./contact/contact.module";
 import { CoreModule } from "./core/core.module";
 import { FooterModule } from "./footer/footer.module";
 import { RoutingModule } from "./routing/routing.module";
@@ -18,6 +19,7 @@ import { RoutingModule } from "./routing/routing.module";
     BrowserModule,
     CoreModule,
     FooterModule,
+    ContactModule,
     RoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

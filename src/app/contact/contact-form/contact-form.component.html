@@ -1,2 +1,59 @@
-<h3>Contact</h3>
-<p>Do you have any questions? Contact me!</p>
+<div class="contact-form">
+  <h1 class="contact-form__header">
+    {{ "contact.contact-form.header" | translate }}
+  </h1>
+  <p class="contact-form__info-text">
+    {{ "contact.contact-form.info-text" | translate }}
+  </p>
+
+  <form [formGroup]="formGroup" class="contact-form__form">
+    <mat-form-field
+      id="contact-form__form__name-field"
+      class="contact-form__form__field"
+    >
+      <mat-label>{{
+        "contact.contact-form.form.name-field.label" | translate
+      }}</mat-label>
+      <input
+        matInput
+        [formControl]="nameFieldControl"
+        [placeholder]="
+          'contact.contact-form.form.name-field.placeholder' | translate
+        "
+      />
+    </mat-form-field>
+
+    <mat-form-field
+      id="contact-form__form__email-field"
+      class="contact-form__form__field"
+    >
+      <mat-label>{{
+        "contact.contact-form.form.email-field.label" | translate
+      }}</mat-label>
+      <input
+        matInput
+        [formControl]="emailFieldControl"
+        [placeholder]="
+          'contact.contact-form.form.email-field.placeholder' | translate
+        "
+      />
+    </mat-form-field>
+
+    <mat-form-field
+      id="contact-form__form__message-field"
+      class="contact-form__form__textarea"
+    >
+      <mat-label>{{
+        "contact.contact-form.form.message-field.label" | translate
+      }}</mat-label>
+      <textarea
+        matInput
+        [mat-autosize]="true"
+        [formControl]="messageFieldControl"
+        [placeholder]="
+          'contact.contact-form.form.message-field.placeholder' | translate
+        "
+      ></textarea>
+    </mat-form-field>
+  </form>
+</div>

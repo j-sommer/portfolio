@@ -5,5 +5,25 @@
         "legal-notice": "Impressum"
       }
     }
+  },
+  "contact": {
+    "contact-form": {
+      "header": "Kontakt",
+      "info-text": "Haben Sie Fragen? Kontaktieren Sie mich!",
+      "form": {
+        "name-field": {
+          "label": "Ihr Name",
+          "placeholder": "Bitte hier Ihren Namen eingeben"
+        },
+        "email-field": {
+          "label": "Ihre E-Mail-Adresse",
+          "placeholder": "Hier bitte Ihre E-Mail-Adresse eingeben"
+        },
+        "message-field": {
+          "label": "Nachricht",
+          "placeholder": "Hier können Sie Ihre Nachricht verfassen"
+        }
+      }
+    }
   }
 }
