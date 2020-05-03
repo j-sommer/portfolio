@@ -32,6 +32,13 @@ steps:
       customCommand: 'test'
 
   - task: Npm@1
+    displayName: "Run Application"
+    inputs:
+      command: 'custom'
+      workingDir: './'
+      customCommand: 'start'
+
+  - task: Npm@1
     displayName: "Run E2E Tests"
     inputs:
       command: 'custom'
