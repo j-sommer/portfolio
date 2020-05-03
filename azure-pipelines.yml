@@ -1,8 +1,3 @@
-# Node.js with Angular
-# Build a Node.js project that uses Angular.
-# Add steps that analyze code, save build artifacts, deploy, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
-
 trigger:
   - master
 
@@ -15,14 +10,30 @@ steps:
       versionSpec: "10.x"
     displayName: "Install Node.js"
 
-  - script: |
-      npm install -g @angular/cli
-      npm install
+  - task: Npm@1
+    displayName: "Install Angular CLI"
+    inputs:
+      command: 'custom'
+      workingDir: './'
+      customCommand: 'install -g @angular/cli'
+
+  - task: Npm@1
     displayName: "Install Dependencies"
-  - script: |
-      ng test
+    inputs:
+      command: 'custom'
+      workingDir: './'
+      customCommand: 'install'
+
+  - task: Npm@1
     displayName: "Run Unit Tests"
-  - script: |
-      ng build --prod
-      ng e2e
+    inputs:
+      command: 'custom'
+      workingDir: './'
+      customCommand: 'test'
+
+  - task: Npm@1
     displayName: "Run E2E Tests"
+    inputs:
+      command: 'custom'
+      workingDir: './'
+      customCommand: 'e2e'
