@@ -5,5 +5,29 @@
         "legal-notice": "Legal Notice"
       }
     }
+  },
+  "contact": {
+    "contact-form": {
+      "header": "Contact",
+      "info-text": "Do you have any questions? Contact me!",
+      "form": {
+        "submit": "Send",
+        "name-field": {
+          "label": "Name",
+          "placeholder": "Please enter your name",
+          "required": "required"
+        },
+        "email-field": {
+          "label": "Email",
+          "placeholder": "Please enter your email address",
+          "required": "required",
+          "invalid": "Please enter a valid email address"
+        },
+        "message-field": {
+          "label": "Message",
+          "placeholder": "Here you can enter your question"
+        }
+      }
+    }
   }
 }
