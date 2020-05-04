@@ -1,12 +1,20 @@
 import { DebugElement } from "@angular/core";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { ReactiveFormsModule } from "@angular/forms";
+import { MatButtonModule } from "@angular/material/button";
+import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { TranslateModule } from "@ngx-translate/core";
 
+import { ContactRequest } from "../../models/contact-request.model";
+import { ContactService } from "../../services/contact.service";
 import { ContactFormComponent } from "./contact-form.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { of } from "rxjs";
+import { ColorType } from "shared/models/color-type.enum";
+
+jest.mock("../../services/contact.service");
 
 describe("ContactFormComponent", () => {
   let component: ContactFormComponent;
@@ -19,10 +27,13 @@ describe("ContactFormComponent", () => {
         declarations: [ContactFormComponent],
         imports: [
           TranslateModule.forRoot(),
-          MatInputModule,
           NoopAnimationsModule,
           ReactiveFormsModule,
+          MatInputModule,
+          MatIconModule,
+          MatButtonModule,
         ],
+        providers: [ContactService],
       }).compileComponents();
     }));
 
@@ -137,7 +148,7 @@ describe("ContactFormComponent", () => {
 
         it("should contain an input field for the name when created", () => {
           // Given
-          const expectedFieldClass = "contact-form__form__field";
+          const expectedFieldClass = "contact-form__form__info-fields__input";
           const expectedLabelContent =
             "contact.contact-form.form.name-field.label";
           const expectedPlaceholderContent =
@@ -198,7 +209,7 @@ describe("ContactFormComponent", () => {
 
         it("should contain an input field for the email when created", () => {
           // Given
-          const expectedFieldClass = "contact-form__form__field";
+          const expectedFieldClass = "contact-form__form__info-fields__input";
           const expectedLabelContent =
             "contact.contact-form.form.email-field.label";
           const expectedPlaceholderContent =
@@ -303,8 +314,79 @@ describe("ContactFormComponent", () => {
   });
 
   describe("Without Template", () => {
+    const mockContactService = { sendContactRequest: jest.fn() } as any;
+
     beforeEach(() => {
-      component = new ContactFormComponent();
+      component = new ContactFormComponent(
+        mockContactService as ContactService
+      );
+    });
+
+    afterEach(() => {
+      jest.resetAllMocks();
+    });
+
+    it("should forward the inputs to the contact service when form is submitted", () => {
+      // Given
+      const mockContactRequest = {
+        name: "name",
+        email: "email@mail.com",
+        message: "message",
+      } as ContactRequest;
+
+      component.formGroup.setValue(mockContactRequest);
+
+      const sendRequestSpy = jest
+        .spyOn(mockContactService, "sendContactRequest")
+        .mockReturnValueOnce(of(1));
+
+      // When
+      const actual = component.onSend(component.formGroup);
+
+      // Then
+      expect(sendRequestSpy).toHaveBeenCalledWith(mockContactRequest);
+    });
+
+    it("should forward the inputs to the contact service when form is submitted", () => {
+      // Given
+      const mockContactRequest = {
+        name: "name",
+        email: "email@mail.com",
+        message: "message",
+      } as ContactRequest;
+
+      component.formGroup.setValue(mockContactRequest);
+
+      const sendRequestSpy = jest
+        .spyOn(mockContactService, "sendContactRequest")
+        .mockReturnValueOnce(of(1));
+
+      // When
+      const actual = component.onSend(component.formGroup);
+
+      // Then
+      expect(sendRequestSpy).toHaveBeenCalledWith(mockContactRequest);
+    });
+
+    it("should set the submit color to Success when the contact request was successfully", () => {
+      // Given
+      const mockContactRequest = {
+        name: "name",
+        email: "email@mail.com",
+        message: "message",
+      } as ContactRequest;
+
+      component.formGroup.setValue(mockContactRequest);
+
+      const sendRequestSpy = jest
+        .spyOn(mockContactService, "sendContactRequest")
+        .mockReturnValueOnce(of(1));
+
+      // When
+      const actual = component.onSend(component.formGroup);
+
+      // Then
+      expect(component.submitColor).toBe(ColorType.Success);
     });
   });
 });
