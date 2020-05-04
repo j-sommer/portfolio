@@ -6,9 +6,13 @@
       }
     }
   },
+  "about": {
+    "header": "About"
+  },
+  "projects": { "header": "Projects" },
   "contact": {
+    "header": "Contact",
     "contact-form": {
-      "header": "Contact",
       "info-text": "Do you have any questions? Contact me!",
       "form": {
         "submit": "Send",

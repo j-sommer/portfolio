@@ -47,22 +47,6 @@ describe("ContactFormComponent", () => {
       expect(component).toBeTruthy();
     });
 
-    it("should contain a h1 header with 'Contact' as content when created", () => {
-      // Given
-      const expectedContent = "contact.contact-form.header";
-      const expectedClass = "contact-form__header";
-
-      // When
-      const headerElement = fixture.debugElement.query(By.css("h1"));
-
-      // Then
-      expect(headerElement).toBeTruthy();
-      expect(headerElement.nativeElement.textContent).toContain(
-        expectedContent
-      );
-      expect(headerElement.nativeElement.classList).toContain(expectedClass);
-    });
-
     it("should contain a <p> element with the expected text as content when created", () => {
       // Given
       const expectedContent = "contact.contact-form.info-text";

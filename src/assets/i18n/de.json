@@ -6,9 +6,13 @@
       }
     }
   },
+  "about": {
+    "header": "Über Mich"
+  },
+  "projects": { "header": "Projekte" },
   "contact": {
+    "header": "Kontakt",
     "contact-form": {
-      "header": "Kontakt",
       "info-text": "Haben Sie Fragen? Kontaktieren Sie mich!",
       "form": {
         "submit": "Senden",

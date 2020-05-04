@@ -1,9 +1,7 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { By } from "@angular/platform-browser";
 import { TranslateModule } from "@ngx-translate/core";
-import { MockComponent } from "ng-mocks";
 
-import { ContactFormComponent } from "../contact-form/contact-form.component";
 import { SectionComponent } from "./section.component";
 
 describe("SectionComponent", () => {
@@ -12,7 +10,7 @@ describe("SectionComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SectionComponent, MockComponent(ContactFormComponent)],
+      declarations: [SectionComponent],
       imports: [TranslateModule.forRoot()],
     }).compileComponents();
   }));
@@ -27,9 +25,9 @@ describe("SectionComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("should contain a h1 header with 'Contact' as content when created", () => {
+  it("should contain a h1 header when created", () => {
     // Given
-    const expectedContent = "contact.header";
+    const expectedContent = "projects.header";
 
     // When
     const headerElement = fixture.debugElement.query(By.css("h1"));
