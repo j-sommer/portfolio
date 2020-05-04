@@ -1,6 +1,12 @@
 import { Component } from "@angular/core";
-import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { FormControl, FormGroup, Validators, NgForm } from "@angular/forms";
 import { ErrorStateInvalidFieldMatcher } from "shared/form-error-matcher/error-state-dirty-field/error-state-invalid-field.matcher";
+
+type FormResult = {
+  name: string;
+  email: string;
+  message: string;
+};
 
 @Component({
   selector: "app-contact-form",
@@ -22,4 +28,8 @@ export class ContactFormComponent {
     email: this.emailFieldControl,
     message: this.messageFieldControl,
   });
+
+  public onSend(form: FormGroup): void {
+    const formResult: FormResult = form.value;
+  }
 }

@@ -6,7 +6,11 @@
     {{ "contact.contact-form.info-text" | translate }}
   </p>
 
-  <form [formGroup]="formGroup" class="contact-form__form">
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="onSend(formGroup)"
+    class="contact-form__form"
+  >
     <mat-form-field
       id="contact-form__form__name-field"
       class="contact-form__form__field"
@@ -76,5 +80,8 @@
         "
       ></textarea>
     </mat-form-field>
+    <button mat-raised-button color="primary" [disabled]="formGroup.invalid">
+      {{ "contact.contact-form.form.submit" | translate }}
+    </button>
   </form>
 </div>

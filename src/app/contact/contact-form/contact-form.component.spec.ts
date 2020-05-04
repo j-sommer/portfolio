@@ -82,6 +82,50 @@ describe("ContactFormComponent", () => {
         );
       });
 
+      describe("Submit Button", () => {
+        it("should contain a submit primary button when created", () => {
+          // Given
+          const expectedContent = "contact.contact-form.form.submit";
+
+          // When
+          const submitButtonElement = formElement.query(By.css("button"));
+
+          // Then
+          expect(submitButtonElement).toBeTruthy();
+          expect(submitButtonElement.nativeElement.textContent).toContain(
+            expectedContent
+          );
+        });
+
+        it("should disable submit button when form is invalid", () => {
+          // Given
+          component.formGroup.markAllAsTouched();
+
+          // When
+          fixture.detectChanges();
+
+          const submitButtonElement = formElement.query(By.css("button"));
+
+          // Then
+          expect(submitButtonElement.nativeElement.disabled).toBe(true);
+        });
+
+        it("should enable submit button when form is valid", () => {
+          // Given
+          component.emailFieldControl.setValue("valid@email.com");
+          component.nameFieldControl.setValue("valid");
+          component.formGroup.markAllAsTouched();
+
+          // When
+          fixture.detectChanges();
+
+          const submitButtonElement = formElement.query(By.css("button"));
+
+          // Then
+          expect(submitButtonElement.nativeElement.disabled).toBe(false);
+        });
+      });
+
       describe("Name Field", () => {
         let fieldElement;
 

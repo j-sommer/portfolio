@@ -11,6 +11,7 @@
       "header": "Kontakt",
       "info-text": "Haben Sie Fragen? Kontaktieren Sie mich!",
       "form": {
+        "submit": "Senden",
         "name-field": {
           "label": "Name",
           "placeholder": "Bitte hier Ihren Namen eingeben",
