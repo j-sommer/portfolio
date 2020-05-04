@@ -7,10 +7,12 @@ import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { environment } from "../environments/environment";
+import { AboutModule } from "./about/about.module";
 import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { CoreModule } from "./core/core.module";
 import { FooterModule } from "./footer/footer.module";
+import { ProjectsModule } from "./projects/projects.module";
 import { RoutingModule } from "./routing/routing.module";
 
 @NgModule({
@@ -20,6 +22,8 @@ import { RoutingModule } from "./routing/routing.module";
     CoreModule,
     FooterModule,
     ContactModule,
+    AboutModule,
+    ProjectsModule,
     RoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

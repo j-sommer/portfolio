@@ -3,10 +3,12 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
 import { MockComponents, MockModule } from "ng-mocks";
 
+import { AboutModule } from "./about/about.module";
 import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { HeaderComponent } from "./core/components/header/header.component";
 import { FooterComponent } from "./footer/footer.component";
+import { ProjectsModule } from "./projects/projects.module";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -18,6 +20,8 @@ describe("AppComponent", () => {
       imports: [
         RouterTestingModule,
         MockModule(ContactModule),
+        MockModule(AboutModule),
+        MockModule(ProjectsModule),
         TranslateModule.forRoot(),
       ],
     }).compileComponents();
