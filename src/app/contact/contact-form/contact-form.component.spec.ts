@@ -83,17 +83,23 @@ describe("ContactFormComponent", () => {
       });
 
       describe("Name Field", () => {
+        let fieldElement;
+
+        beforeEach(() => {
+          fieldElement = formElement.query(
+            By.css("#contact-form__form__name-field")
+          );
+        });
+
         it("should contain an input field for the name when created", () => {
           // Given
           const expectedFieldClass = "contact-form__form__field";
-          const expectedFieldId = "contact-form__form__name-field";
           const expectedLabelContent =
             "contact.contact-form.form.name-field.label";
           const expectedPlaceholderContent =
             "contact.contact-form.form.name-field.placeholder";
 
           // When
-          const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
           const labelElement = fieldElement.query(By.css("mat-label"));
           const inputElement = fieldElement.query(By.css("input"));
 
@@ -122,12 +128,12 @@ describe("ContactFormComponent", () => {
             "contact.contact-form.form.name-field.required";
 
           component.nameFieldControl.setValue("");
-          component.nameFieldControl.markAsDirty();
+          component.nameFieldControl.markAsTouched();
 
           // When
           fixture.detectChanges();
 
-          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+          const errorElement = fieldElement.query(By.css("mat-error"));
 
           // Then
           expect(errorElement).toBeTruthy();
@@ -138,17 +144,23 @@ describe("ContactFormComponent", () => {
       });
 
       describe("Email Field", () => {
+        let fieldElement;
+
+        beforeEach(() => {
+          fieldElement = formElement.query(
+            By.css("#contact-form__form__email-field")
+          );
+        });
+
         it("should contain an input field for the email when created", () => {
           // Given
           const expectedFieldClass = "contact-form__form__field";
-          const expectedFieldId = "contact-form__form__email-field";
           const expectedLabelContent =
             "contact.contact-form.form.email-field.label";
           const expectedPlaceholderContent =
             "contact.contact-form.form.email-field.placeholder";
 
           // When
-          const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
           const labelElement = fieldElement.query(By.css("mat-label"));
           const inputElement = fieldElement.query(By.css("input"));
 
@@ -177,12 +189,12 @@ describe("ContactFormComponent", () => {
             "contact.contact-form.form.email-field.invalid";
 
           component.emailFieldControl.setValue("invalid email address");
-          component.emailFieldControl.markAsDirty();
+          component.emailFieldControl.markAsTouched();
 
           // When
           fixture.detectChanges();
 
-          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+          const errorElement = fieldElement.query(By.css("mat-error"));
 
           // Then
           expect(errorElement).toBeTruthy();
@@ -197,12 +209,12 @@ describe("ContactFormComponent", () => {
             "contact.contact-form.form.email-field.required";
 
           component.emailFieldControl.setValue("");
-          component.emailFieldControl.markAsDirty();
+          component.emailFieldControl.markAsTouched();
 
           // When
           fixture.detectChanges();
 
-          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+          const errorElement = fieldElement.query(By.css("mat-error"));
 
           // Then
           expect(errorElement).toBeTruthy();

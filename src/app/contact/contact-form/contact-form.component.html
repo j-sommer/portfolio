@@ -22,13 +22,11 @@
           'contact.contact-form.form.name-field.placeholder' | translate
         "
       />
-    </mat-form-field>
 
-    <mat-error
-      *ngIf="nameFieldControl.dirty && nameFieldControl.hasError('required')"
-    >
-      {{ "contact.contact-form.form.name-field.required" | translate }}
-    </mat-error>
+      <mat-error *ngIf="nameFieldControl.hasError('required')">
+        {{ "contact.contact-form.form.name-field.required" | translate }}
+      </mat-error>
+    </mat-form-field>
 
     <mat-form-field
       id="contact-form__form__email-field"
@@ -46,22 +44,20 @@
           'contact.contact-form.form.email-field.placeholder' | translate
         "
       />
+
+      <mat-error
+        *ngIf="
+          emailFieldControl.hasError('email') &&
+          !emailFieldControl.hasError('required')
+        "
+      >
+        {{ "contact.contact-form.form.email-field.invalid" | translate }}
+      </mat-error>
+
+      <mat-error *ngIf="emailFieldControl.hasError('required')">
+        {{ "contact.contact-form.form.email-field.required" | translate }}
+      </mat-error>
     </mat-form-field>
-
-    <mat-error
-      *ngIf="
-        emailFieldControl.hasError('email') &&
-        !emailFieldControl.hasError('required')
-      "
-    >
-      {{ "contact.contact-form.form.email-field.invalid" | translate }}
-    </mat-error>
-
-    <mat-error
-      *ngIf="emailFieldControl.dirty && emailFieldControl.hasError('required')"
-    >
-      {{ "contact.contact-form.form.email-field.required" | translate }}
-    </mat-error>
 
     <mat-form-field
       id="contact-form__form__message-field"
