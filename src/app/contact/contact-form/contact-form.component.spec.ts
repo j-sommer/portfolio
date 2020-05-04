@@ -82,92 +82,166 @@ describe("ContactFormComponent", () => {
         );
       });
 
-      it("should contain an input field for the name when created", () => {
-        // Given
-        const expectedFieldClass = "contact-form__form__field";
-        const expectedFieldId = "contact-form__form__name-field";
-        const expectedLabelContent =
-          "contact.contact-form.form.name-field.label";
-        const expectedPlaceholderContent =
-          "contact.contact-form.form.name-field.placeholder";
+      describe("Name Field", () => {
+        it("should contain an input field for the name when created", () => {
+          // Given
+          const expectedFieldClass = "contact-form__form__field";
+          const expectedFieldId = "contact-form__form__name-field";
+          const expectedLabelContent =
+            "contact.contact-form.form.name-field.label";
+          const expectedPlaceholderContent =
+            "contact.contact-form.form.name-field.placeholder";
 
-        // When
-        const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
-        const labelElement = fieldElement.query(By.css("mat-label"));
-        const inputElement = fieldElement.query(By.css("input"));
+          // When
+          const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
+          const labelElement = fieldElement.query(By.css("mat-label"));
+          const inputElement = fieldElement.query(By.css("input"));
 
-        // Then
-        expect(fieldElement).toBeTruthy();
-        expect(inputElement.nativeElement.placeholder).toContain(
-          expectedPlaceholderContent
-        );
-        expect(inputElement.componentInstance.nameFieldControl).toMatchObject(
-          component.nameFieldControl
-        );
+          // Then
+          expect(fieldElement.nativeElement.classList).toContain(
+            expectedFieldClass
+          );
+          expect(inputElement.nativeElement.placeholder).toContain(
+            expectedPlaceholderContent
+          );
+          expect(inputElement.componentInstance.nameFieldControl).toMatchObject(
+            component.nameFieldControl
+          );
+          expect(
+            inputElement.componentInstance.invalidFieldMatcher
+          ).toMatchObject(component.invalidFieldMatcher);
 
-        expect(labelElement.nativeElement.textContent).toContain(
-          expectedLabelContent
-        );
+          expect(labelElement.nativeElement.textContent).toContain(
+            expectedLabelContent
+          );
+        });
+
+        it("should display an error message when the name field is not filled", () => {
+          // Given
+          const expectedErrorContent =
+            "contact.contact-form.form.name-field.required";
+
+          component.nameFieldControl.setValue("");
+          component.nameFieldControl.markAsDirty();
+
+          // When
+          fixture.detectChanges();
+
+          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+
+          // Then
+          expect(errorElement).toBeTruthy();
+          expect(errorElement.nativeElement.textContent).toContain(
+            expectedErrorContent
+          );
+        });
       });
 
-      it("should contain an input field for the email when created", () => {
-        // Given
-        const expectedFieldClass = "contact-form__form__field";
-        const expectedFieldId = "contact-form__form__email-field";
-        const expectedLabelContent =
-          "contact.contact-form.form.email-field.label";
-        const expectedPlaceholderContent =
-          "contact.contact-form.form.email-field.placeholder";
+      describe("Email Field", () => {
+        it("should contain an input field for the email when created", () => {
+          // Given
+          const expectedFieldClass = "contact-form__form__field";
+          const expectedFieldId = "contact-form__form__email-field";
+          const expectedLabelContent =
+            "contact.contact-form.form.email-field.label";
+          const expectedPlaceholderContent =
+            "contact.contact-form.form.email-field.placeholder";
 
-        // When
-        const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
-        const labelElement = fieldElement.query(By.css("mat-label"));
-        const inputElement = fieldElement.query(By.css("input"));
+          // When
+          const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
+          const labelElement = fieldElement.query(By.css("mat-label"));
+          const inputElement = fieldElement.query(By.css("input"));
 
-        // Then
-        expect(fieldElement.nativeElement.classList).toContain(
-          expectedFieldClass
-        );
-        expect(inputElement.nativeElement.placeholder).toContain(
-          expectedPlaceholderContent
-        );
-        expect(inputElement.componentInstance.emailFieldControl).toMatchObject(
-          component.emailFieldControl
-        );
+          // Then
+          expect(fieldElement.nativeElement.classList).toContain(
+            expectedFieldClass
+          );
+          expect(inputElement.nativeElement.placeholder).toContain(
+            expectedPlaceholderContent
+          );
+          expect(
+            inputElement.componentInstance.emailFieldControl
+          ).toMatchObject(component.emailFieldControl);
+          expect(
+            inputElement.componentInstance.invalidFieldMatcher
+          ).toMatchObject(component.invalidFieldMatcher);
 
-        expect(labelElement.nativeElement.textContent).toContain(
-          expectedLabelContent
-        );
+          expect(labelElement.nativeElement.textContent).toContain(
+            expectedLabelContent
+          );
+        });
+
+        it("should display an error message when the email field is filled but invalid", () => {
+          // Given
+          const expectedErrorContent =
+            "contact.contact-form.form.email-field.invalid";
+
+          component.emailFieldControl.setValue("invalid email address");
+          component.emailFieldControl.markAsDirty();
+
+          // When
+          fixture.detectChanges();
+
+          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+
+          // Then
+          expect(errorElement).toBeTruthy();
+          expect(errorElement.nativeElement.textContent).toContain(
+            expectedErrorContent
+          );
+        });
+
+        it("should display an error message when the email field is not filled", () => {
+          // Given
+          const expectedErrorContent =
+            "contact.contact-form.form.email-field.required";
+
+          component.emailFieldControl.setValue("");
+          component.emailFieldControl.markAsDirty();
+
+          // When
+          fixture.detectChanges();
+
+          const errorElement = fixture.debugElement.query(By.css("mat-error"));
+
+          // Then
+          expect(errorElement).toBeTruthy();
+          expect(errorElement.nativeElement.textContent).toContain(
+            expectedErrorContent
+          );
+        });
       });
 
-      it("should contain a textarea field for the message when created", () => {
-        // Given
-        const expectedFieldClass = "contact-form__form__textarea";
-        const expectedFieldId = "contact-form__form__message-field";
-        const expectedLabelContent =
-          "contact.contact-form.form.message-field.label";
-        const expectedPlaceholderContent =
-          "contact.contact-form.form.message-field.placeholder";
+      describe("Message Field", () => {
+        it("should contain a textarea field for the message when created", () => {
+          // Given
+          const expectedFieldClass = "contact-form__form__textarea";
+          const expectedFieldId = "contact-form__form__message-field";
+          const expectedLabelContent =
+            "contact.contact-form.form.message-field.label";
+          const expectedPlaceholderContent =
+            "contact.contact-form.form.message-field.placeholder";
 
-        // When
-        const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
-        const labelElement = fieldElement.query(By.css("mat-label"));
-        const textareaElement = fieldElement.query(By.css("textarea"));
+          // When
+          const fieldElement = formElement.query(By.css(`#${expectedFieldId}`));
+          const labelElement = fieldElement.query(By.css("mat-label"));
+          const textareaElement = fieldElement.query(By.css("textarea"));
 
-        // Then
-        expect(fieldElement.nativeElement.classList).toContain(
-          expectedFieldClass
-        );
-        expect(textareaElement.nativeElement.placeholder).toContain(
-          expectedPlaceholderContent
-        );
-        expect(
-          textareaElement.componentInstance.messageFieldControl
-        ).toMatchObject(component.messageFieldControl);
+          // Then
+          expect(fieldElement.nativeElement.classList).toContain(
+            expectedFieldClass
+          );
+          expect(textareaElement.nativeElement.placeholder).toContain(
+            expectedPlaceholderContent
+          );
+          expect(
+            textareaElement.componentInstance.messageFieldControl
+          ).toMatchObject(component.messageFieldControl);
 
-        expect(labelElement.nativeElement.textContent).toContain(
-          expectedLabelContent
-        );
+          expect(labelElement.nativeElement.textContent).toContain(
+            expectedLabelContent
+          );
+        });
       });
     });
   });

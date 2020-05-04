@@ -12,12 +12,15 @@
       "info-text": "Do you have any questions? Contact me!",
       "form": {
         "name-field": {
-          "label": "Your Name",
-          "placeholder": "Please enter your name"
+          "label": "Name",
+          "placeholder": "Please enter your name",
+          "required": "required"
         },
         "email-field": {
-          "label": "Your Email",
-          "placeholder": "Please enter your email address"
+          "label": "Email",
+          "placeholder": "Please enter your email address",
+          "required": "required",
+          "invalid": "Please enter a valid email address"
         },
         "message-field": {
           "label": "Message",

@@ -12,12 +12,15 @@
       "info-text": "Haben Sie Fragen? Kontaktieren Sie mich!",
       "form": {
         "name-field": {
-          "label": "Ihr Name",
-          "placeholder": "Bitte hier Ihren Namen eingeben"
+          "label": "Name",
+          "placeholder": "Bitte hier Ihren Namen eingeben",
+          "required": "Bitte Pflichtfeld füllen!"
         },
         "email-field": {
-          "label": "Ihre E-Mail-Adresse",
-          "placeholder": "Hier bitte Ihre E-Mail-Adresse eingeben"
+          "label": "E-Mail",
+          "placeholder": "Hier bitte Ihre E-Mail-Adresse eingeben",
+          "required": "Bitte Pflichtfeld füllen!",
+          "invalid": "Bitte eine valide E-Mail-Adresse eingeben!"
         },
         "message-field": {
           "label": "Nachricht",
