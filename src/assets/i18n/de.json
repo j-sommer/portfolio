@@ -2,6 +2,9 @@
   "core": {
     "header": {
       "menu-entries": {
+        "about": "Über Mich",
+        "projects": "Projekte",
+        "contact": "Kontakt",
         "legal-notice": "Impressum"
       }
     }

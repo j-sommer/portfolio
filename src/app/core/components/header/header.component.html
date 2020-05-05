@@ -1,10 +1,15 @@
-<mat-toolbar id="header">
-  <div>
-    <button mat-button color="primary" routerLink="/">
-      Home
-    </button>
-    <button mat-button color="primary" routerLink="/legal-notice">
-      {{ "core.header.menu-entries.legal-notice" | translate }}
-    </button>
-  </div>
+<mat-toolbar color="primary" class="toolbar">
+  <h3 class="toolbar__header">JS</h3>
+  <button mat-button routerLink="." fragment="about">
+    {{ "core.header.menu-entries.about" | translate }}
+  </button>
+  <button mat-button routerLink="." fragment="projects">
+    {{ "core.header.menu-entries.projects" | translate }}
+  </button>
+  <button mat-button routerLink="." fragment="contact">
+    {{ "core.header.menu-entries.contact" | translate }}
+  </button>
+  <button mat-button routerLink="/legal-notice">
+    {{ "core.header.menu-entries.legal-notice" | translate }}
+  </button>
 </mat-toolbar>

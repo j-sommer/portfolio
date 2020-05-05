@@ -1,12 +1,15 @@
-<div class="mat-typography content">
-  <div class="content__section">
-    <app-about-section></app-about-section>
+<div class="mat-typography">
+  <app-header></app-header>
+  <div class="content">
+    <div class="content__section" [attr.id]="'about'">
+      <app-about-section></app-about-section>
+    </div>
+    <div class="content__section" [attr.id]="'projects'">
+      <app-projects-section></app-projects-section>
+    </div>
+    <div class="content__section" [attr.id]="'contact'">
+      <app-contact-section></app-contact-section>
+    </div>
+    <app-footer id="footer"></app-footer>
   </div>
-  <div class="content__section">
-    <app-projects-section></app-projects-section>
-  </div>
-  <div class="content__section">
-    <app-contact-section></app-contact-section>
-  </div>
-  <app-footer id="footer"></app-footer>
 </div>
