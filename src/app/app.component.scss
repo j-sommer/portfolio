@@ -3,11 +3,6 @@
   display: block;
 }
 
-#content {
-  height: 2000px;
-  position: relative;
-}
-
 #bottom-divider {
   height: 10vh;
 }
@@ -15,4 +10,12 @@
 #footer {
   position: absolute;
   bottom: 0;
+}
+
+.content {
+  max-width: 100%;
+  padding: 20px 10px;
+  &__section {
+    min-height: 900px;
+  }
 }

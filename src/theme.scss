@@ -1,8 +1,8 @@
 @import "~@angular/material/theming";
 @include mat-core();
 
-$portfolio-primary: mat-palette($mat-indigo);
-$portfolio-accent: mat-palette($mat-pink, A200, A100, A400);
+$portfolio-primary: mat-palette($mat-blue);
+$portfolio-accent: mat-palette($mat-deep-orange, A200, A100, A400);
 
 $portfolio-warn: mat-palette($mat-red);
 
@@ -12,15 +12,13 @@ $portfolio-theme: mat-dark-theme(
   $portfolio-warn
 );
 
-@include angular-material-theme($portfolio-theme);
-
 $custom-typography: mat-typography-config(
   $font-family: "Montserrat",
   $display-4: mat-typography-level(112px, 112px, 300),
   $display-3: mat-typography-level(56px, 56px, 400),
   $display-2: mat-typography-level(45px, 48px, 400),
   $display-1: mat-typography-level(34px, 40px, 400),
-  $headline: mat-typography-level(50px, 32px, 300),
+  $headline: mat-typography-level(65px, 40px, 100),
   $title: mat-typography-level(20px, 32px, 500),
   $subheading-2: mat-typography-level(16px, 28px, 400),
   $subheading-1: mat-typography-level(15px, 24px, 400),
@@ -31,11 +29,13 @@ $custom-typography: mat-typography-config(
   $input: mat-typography-level(14px, 1.25, 400),
 );
 
+@include angular-material-theme($portfolio-theme);
 @include angular-material-typography($custom-typography);
 
 html,
 body {
-  height: 100%;
+  padding: 0;
+  overflow-x: hidden;
   @extend .mat-app-background;
 }
 body {
@@ -43,7 +43,11 @@ body {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
 }
 
+h1 {
+  text-align: center;
+}
+
 .mat-success {
-  background-color: green !important;
+  background-color: lightgreen !important;
   color: #fff;
 }
