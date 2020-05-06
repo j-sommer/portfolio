@@ -1,9 +1,16 @@
 <div class="app mat-typography">
-  <div class="app__header">
-    <app-header></app-header>
+  <div
+    class="app__header"
+    stickybits
+    (stuck)="onStuck($event)"
+    (sticky)="onSticky($event)"
+  >
+    <app-header [isSticky]="isSticky"></app-header>
   </div>
 
   <div class="app__content">
+    <div class="app__content__section placeholder"></div>
+
     <div
       class="app__content__section"
       [attr.id]="'about'"

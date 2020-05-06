@@ -1,4 +1,9 @@
+@import "./../../../../theme.scss";
+
 .toolbar {
+  transition: background-color 0.3s, color 0.3s;
+  transition-timing-function: linear;
+
   &__header {
     margin-right: 30px;
   }
@@ -7,4 +12,9 @@
     margin-left: auto;
     cursor: pointer;
   }
+}
+
+.is-stuck {
+  color: mat-color($portfolio-primary) !important;
+  background-color: transparent !important;
 }

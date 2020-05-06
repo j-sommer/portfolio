@@ -1,17 +1,23 @@
+@import "./../theme.scss";
+
+.placeholder {
+  background-image: url("/assets/images/placeholder.JPG");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: center;
+}
+
 .app {
   position: relative;
   display: block;
 
   &__header {
-    display: block;
-    position: sticky;
-    top: 0;
     z-index: 5;
   }
 
   &__content {
     max-width: 100%;
-    padding: 20px 10px;
 
     &__section {
       min-height: 100vh;

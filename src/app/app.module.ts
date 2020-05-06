@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { StickybitsModule } from "ngx-stickybits";
 
 import { environment } from "../environments/environment";
 import { AboutModule } from "./about/about.module";
@@ -27,6 +28,7 @@ import { RoutingModule } from "./routing/routing.module";
     RoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    StickybitsModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,
