@@ -8,6 +8,9 @@ import * as AOS from "aos";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit {
+  public readonly fadeInIdentifier = "fade-in";
+  public readonly sectionFadeInDurationInMs = 1000;
+
   constructor(private translate: TranslateService) {
     translate.setDefaultLang("en");
   }
