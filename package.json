@@ -30,6 +30,7 @@
     "@ngx-translate/http-loader": "^4.0.0",
     "aos": "^2.3.4",
     "ng-mocks": "^9.2.0",
+    "ngx-stickybits": "^8.0.0",
     "rxjs": "~6.5.5",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

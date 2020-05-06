@@ -1,4 +1,11 @@
-<mat-toolbar color="primary" class="toolbar">
+<mat-toolbar
+  color="primary"
+  class="toolbar"
+  [ngClass]="{
+    'is-sticky': isSticky,
+    'is-stuck': !isSticky
+  }"
+>
   <h3 class="toolbar__header">JS</h3>
 
   <button
