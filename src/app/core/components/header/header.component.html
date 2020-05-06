@@ -1,15 +1,31 @@
 <mat-toolbar color="primary" class="toolbar">
   <h3 class="toolbar__header">JS</h3>
-  <button mat-button routerLink="." fragment="about">
-    {{ "core.header.menu-entries.about" | translate }}
+
+  <button
+    *ngFor="let section of sectionSet"
+    mat-button
+    routerLink="."
+    [fragment]="section"
+  >
+    {{ "core.header.menu-entries." + section | translate }}
   </button>
-  <button mat-button routerLink="." fragment="projects">
-    {{ "core.header.menu-entries.projects" | translate }}
-  </button>
-  <button mat-button routerLink="." fragment="contact">
-    {{ "core.header.menu-entries.contact" | translate }}
-  </button>
+
   <button mat-button routerLink="/legal-notice">
     {{ "core.header.menu-entries.legal-notice" | translate }}
   </button>
+
+  <mat-icon
+    class="toolbar__language-select"
+    [matMenuTriggerFor]="languageSelection"
+    >language</mat-icon
+  >
+
+  <mat-menu #languageSelection="matMenu" yPosition="below">
+    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.German)">
+      {{ "core.header.language-selection.german" | translate }}
+    </button>
+    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.English)">
+      {{ "core.header.language-selection.english" | translate }}
+    </button>
+  </mat-menu>
 </mat-toolbar>

@@ -6,6 +6,10 @@
         "projects": "Projekte",
         "contact": "Kontakt",
         "legal-notice": "Impressum"
+      },
+      "language-selection": {
+        "german": "Deutsch",
+        "english": "Englisch"
       }
     }
   },
