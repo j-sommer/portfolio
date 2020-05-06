@@ -1,7 +1,10 @@
-#header {
-  justify-content: center;
-  align-items: center;
-  position: sticky;
-  top: 0;
-  z-index: 5;
+.toolbar {
+  &__header {
+    margin-right: 30px;
+  }
+
+  &__language-select {
+    margin-left: auto;
+    cursor: pointer;
+  }
 }

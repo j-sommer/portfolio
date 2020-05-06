@@ -5,7 +5,7 @@ import { ErrorStateInvalidFieldMatcher } from "shared/form-error-matcher/error-s
 
 import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
-import { ColorType } from "shared/models/color-type.enum";
+import { ColorType } from "shared/models/enums/color-type.enum";
 
 @Component({
   selector: "app-contact-form",

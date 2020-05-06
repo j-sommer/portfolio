@@ -12,7 +12,7 @@ import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
 import { ContactFormComponent } from "./contact-form.component";
 import { of } from "rxjs";
-import { ColorType } from "shared/models/color-type.enum";
+import { ColorType } from "shared/models/enums/color-type.enum";
 
 jest.mock("../../services/contact.service");
 

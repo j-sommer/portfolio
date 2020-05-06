@@ -2,7 +2,14 @@
   "core": {
     "header": {
       "menu-entries": {
+        "about": "About",
+        "projects": "Projects",
+        "contact": "Contact",
         "legal-notice": "Legal Notice"
+      },
+      "language-selection": {
+        "german": "German",
+        "english": "English"
       }
     }
   },

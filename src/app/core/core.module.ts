@@ -2,6 +2,8 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
+import { MatIconModule } from "@angular/material/icon";
+import { MatMenuModule } from "@angular/material/menu";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { TranslateModule } from "@ngx-translate/core";
 
@@ -14,6 +16,8 @@ import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.com
   imports: [
     CommonModule,
     MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
     MatCardModule,
     MatButtonModule,
     RoutingModule,

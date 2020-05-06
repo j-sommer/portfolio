@@ -1,21 +1,25 @@
-:host {
+.app {
   position: relative;
   display: block;
-}
 
-#bottom-divider {
-  height: 10vh;
-}
+  &__header {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+  }
 
-#footer {
-  position: absolute;
-  bottom: 0;
-}
+  &__content {
+    max-width: 100%;
+    padding: 20px 10px;
 
-.content {
-  max-width: 100%;
-  padding: 20px 10px;
-  &__section {
-    min-height: 900px;
+    &__section {
+      min-height: 100vh;
+    }
+
+    &__footer {
+      position: absolute;
+      bottom: 0;
+    }
   }
 }
