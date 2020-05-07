@@ -3,12 +3,14 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { MatToolbarModule } from "@angular/material/toolbar";
+import { By } from "@angular/platform-browser";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
-import { MockModule } from "ng-mocks";
+import { MockComponents, MockModule } from "ng-mocks";
 
 import { HeaderComponent } from "./header.component";
-import { By } from "@angular/platform-browser";
+import { MenuDesktopComponent } from "./menus/desktop/menu-desktop.component";
+import { MenuMobileComponent } from "./menus/mobile/menu-mobile.component";
 
 describe("HeaderComponent", () => {
   let component: HeaderComponent;
@@ -16,7 +18,10 @@ describe("HeaderComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HeaderComponent],
+      declarations: [
+        HeaderComponent,
+        MockComponents(MenuMobileComponent, MenuDesktopComponent),
+      ],
       imports: [
         RouterTestingModule,
         MockModule(MatToolbarModule),

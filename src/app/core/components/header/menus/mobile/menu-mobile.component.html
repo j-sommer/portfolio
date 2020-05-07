@@ -1,0 +1,37 @@
+<button
+  class="toolbar__mobile-menu"
+  mat-icon-button
+  [matMenuTriggerFor]="mobileMenu"
+>
+  <mat-icon>menu</mat-icon>
+</button>
+
+<div class="menu-mobile">
+  <mat-menu #mobileMenu="matMenu">
+    <button
+      mat-menu-item
+      *ngFor="let section of sectionSet"
+      routerLink="."
+      [fragment]="section"
+    >
+      {{ "core.header.menu-entries." + section | translate }}
+    </button>
+
+    <button mat-menu-item routerLink="/legal-notice">
+      {{ "core.header.menu-entries.legal-notice" | translate }}
+    </button>
+
+    <button mat-menu-item [matMenuTriggerFor]="languageSelection">
+      {{ "core.header.menu-entries.language" | translate }}
+    </button>
+
+    <mat-menu #languageSelection="matMenu" yPosition="below">
+      <button mat-menu-item (click)="selectLanguage(SupportedLanguage.German)">
+        {{ "core.header.language-selection.german" | translate }}
+      </button>
+      <button mat-menu-item (click)="selectLanguage(SupportedLanguage.English)">
+        {{ "core.header.language-selection.english" | translate }}
+      </button>
+    </mat-menu>
+  </mat-menu>
+</div>

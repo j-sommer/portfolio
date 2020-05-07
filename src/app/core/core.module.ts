@@ -9,10 +9,17 @@ import { TranslateModule } from "@ngx-translate/core";
 
 import { RoutingModule } from "../routing/routing.module";
 import { HeaderComponent } from "./components/header/header.component";
+import { MenuDesktopComponent } from "./components/header/menus/desktop/menu-desktop.component";
+import { MenuMobileComponent } from "./components/header/menus/mobile/menu-mobile.component";
 import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.component";
 
 @NgModule({
-  declarations: [HeaderComponent, LegalNoticeComponent],
+  declarations: [
+    HeaderComponent,
+    LegalNoticeComponent,
+    MenuMobileComponent,
+    MenuDesktopComponent,
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
