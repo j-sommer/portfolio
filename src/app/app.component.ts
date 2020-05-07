@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { TranslateService } from "@ngx-translate/core";
 import * as AOS from "aos";
+import { LanguageService } from "shared/services/language/language.service";
 
 @Component({
   selector: "app-root",
@@ -13,8 +14,8 @@ export class AppComponent implements OnInit {
 
   public isSticky = false;
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang("en");
+  constructor(private languageService: LanguageService) {
+    languageService.setDefaultLanguage();
   }
 
   public ngOnInit(): void {
