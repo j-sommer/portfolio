@@ -8,6 +8,7 @@ import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { HeaderComponent } from "./core/components/header/header.component";
 import { FooterComponent } from "./footer/footer.component";
+import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
 
 describe("AppComponent", () => {
@@ -22,6 +23,7 @@ describe("AppComponent", () => {
         MockModule(ContactModule),
         MockModule(AboutModule),
         MockModule(ProjectsModule),
+        MockModule(HomeModule),
         TranslateModule.forRoot(),
       ],
     }).compileComponents();

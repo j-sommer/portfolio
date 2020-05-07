@@ -13,6 +13,7 @@ import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { CoreModule } from "./core/core.module";
 import { FooterModule } from "./footer/footer.module";
+import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
 import { RoutingModule } from "./routing/routing.module";
 
@@ -25,6 +26,7 @@ import { RoutingModule } from "./routing/routing.module";
     ContactModule,
     AboutModule,
     ProjectsModule,
+    HomeModule,
     RoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

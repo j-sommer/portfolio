@@ -1,20 +1,22 @@
 @import "./../../../../theme.scss";
 
 .toolbar {
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
   transition-timing-function: linear;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
 
   &__header {
-    margin-right: 30px;
+    margin-right: 30px !important;
   }
 
   &__language-select {
     margin-left: auto;
     cursor: pointer;
   }
-}
 
-.is-stuck {
-  color: mat-color($portfolio-primary) !important;
-  background-color: transparent !important;
+  &.is-stuck {
+    color: mat-color($portfolio-primary) !important;
+    background-color: transparent !important;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.26);
+  }
 }
