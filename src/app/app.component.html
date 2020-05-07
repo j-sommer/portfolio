@@ -1,10 +1,5 @@
 <div class="app mat-typography">
-  <div
-    class="app__header"
-    stickybits
-    (stuck)="onStuck($event)"
-    (sticky)="onSticky($event)"
-  >
+  <div class="app__header" stickybits (sticky)="onSticky($event)">
     <app-header [isSticky]="isSticky"></app-header>
   </div>
 

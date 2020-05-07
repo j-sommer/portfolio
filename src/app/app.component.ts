@@ -22,10 +22,6 @@ export class AppComponent implements OnInit {
     AOS.init();
   }
 
-  public onStuck(isStuck: boolean): void {
-    console.log(`is stuck ${isStuck}`);
-  }
-
   public onSticky(isSticky: boolean): void {
     this.isSticky = isSticky;
   }

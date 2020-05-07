@@ -15,4 +15,8 @@ export class LanguageService {
       this.translate.setDefaultLang(SupportedLanguage.English);
     }
   }
+
+  public setLanguage(languageCode: SupportedLanguage): void {
+    this.translate.use(languageCode);
+  }
 }

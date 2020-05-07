@@ -8,31 +8,16 @@
 >
   <h3 class="toolbar__header">JS</h3>
 
-  <button
-    *ngFor="let section of sectionSet"
-    mat-button
-    routerLink="."
-    [fragment]="section"
-  >
-    {{ "core.header.menu-entries." + section | translate }}
-  </button>
+  <div *ngIf="isMobileResolution; then mobileView; else desktopView"></div>
 
-  <button mat-button routerLink="/legal-notice">
-    {{ "core.header.menu-entries.legal-notice" | translate }}
-  </button>
-
-  <mat-icon
-    class="toolbar__language-select"
-    [matMenuTriggerFor]="languageSelection"
-    >language</mat-icon
-  >
-
-  <mat-menu #languageSelection="matMenu" yPosition="below">
-    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.German)">
-      {{ "core.header.language-selection.german" | translate }}
-    </button>
-    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.English)">
-      {{ "core.header.language-selection.english" | translate }}
-    </button>
-  </mat-menu>
+  <ng-template #mobileView>
+    <div class="toolbar__menu">
+      <app-menu-mobile [sectionSet]="sectionSet"></app-menu-mobile>
+    </div>
+  </ng-template>
+  <ng-template #desktopView>
+    <div class="toolbar__menu">
+      <app-menu-desktop [sectionSet]="sectionSet"></app-menu-desktop>
+    </div>
+  </ng-template>
 </mat-toolbar>

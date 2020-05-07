@@ -1,0 +1,29 @@
+<div class="menu-desktop">
+  <button
+    *ngFor="let section of sectionSet"
+    mat-button
+    routerLink="."
+    [fragment]="section"
+  >
+    {{ "core.header.menu-entries." + section | translate }}
+  </button>
+
+  <button mat-button routerLink="/legal-notice">
+    {{ "core.header.menu-entries.legal-notice" | translate }}
+  </button>
+
+  <mat-icon
+    class="menu-desktop__language-selection"
+    [matMenuTriggerFor]="languageSelection"
+    >language</mat-icon
+  >
+
+  <mat-menu #languageSelection="matMenu" yPosition="below">
+    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.German)">
+      {{ "core.header.language-selection.german" | translate }}
+    </button>
+    <button mat-menu-item (click)="selectLanguage(SupportedLanguage.English)">
+      {{ "core.header.language-selection.english" | translate }}
+    </button>
+  </mat-menu>
+</div>
