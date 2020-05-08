@@ -1,6 +1,6 @@
 export enum ContactProvider {
-  Twitter = "twitter",
   GitHub = "github",
   LinkedIn = "linkedin",
-  CodePen = "codepen"
+  CodePen = "codepen",
+  Medium = "medium",
 }

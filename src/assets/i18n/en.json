@@ -40,6 +40,9 @@
           "placeholder": "Here you can enter your question"
         }
       }
+    },
+    "follow-me": {
+      "info-text": "Follow me at"
     }
   }
 }

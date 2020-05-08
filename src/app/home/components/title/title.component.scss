@@ -5,21 +5,28 @@
   text-align: center;
 
   &__title {
-    font-weight: 800;
+    font-weight: 900;
     color: transparent;
     font-size: 5.5em;
     background: url("/assets/images/title-background.JPG") repeat;
     background-size: cover;
+    background-attachment: fixed;
     background-position: 40% 40%;
     -webkit-background-clip: text;
     position: relative;
     text-align: center;
     line-height: 65px;
-    letter-spacing: -2px;
+    letter-spacing: 1px;
 
     @include lg {
       font-size: 7em;
       line-height: 90px;
+    }
+  }
+
+  &__subtitle {
+    &__divider {
+      color: mat-color($portfolio-primary);
     }
   }
 }

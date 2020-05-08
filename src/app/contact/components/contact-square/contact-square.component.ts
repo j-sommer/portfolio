@@ -1,15 +1,13 @@
-import { Component, Input } from "@angular/core";
-
-import { ContactProvider } from "../contact-provider";
 import {
-  trigger,
+  animate,
   state,
   style,
   transition,
-  animate,
-  query,
-  animateChild,
+  trigger,
 } from "@angular/animations";
+import { Component, Input } from "@angular/core";
+
+import { ContactProvider } from "../../models/contact-provider";
 
 @Component({
   selector: "app-contact-square",
