@@ -1,0 +1,31 @@
+{
+  "paths": [
+    {
+      "name": "/email",
+      "lambdaFunction": "email",
+      "privacy": {
+        "open": true
+      }
+    }
+  ],
+  "resourceName": "email",
+  "apiName": "email",
+  "functionArns": [
+    {
+      "lambdaFunction": "email"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-portfolio-dev-121917-authRole",
+    "unAuthRoleName": "amplify-portfolio-dev-121917-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "email",
+      "attributes": ["Name", "Arn"]
+    }
+  ]
+}
