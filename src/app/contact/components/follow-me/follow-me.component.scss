@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  justify-content: center;
+}
+
+.follow-me {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__info-text {
+    text-align: center;
+  }
+
+  &__provider {
+    width: 14rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

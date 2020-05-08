@@ -1,9 +1,10 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { By } from "@angular/platform-browser";
 import { TranslateModule } from "@ngx-translate/core";
-import { MockComponent } from "ng-mocks";
+import { MockComponents } from "ng-mocks";
 
 import { ContactFormComponent } from "../contact-form/contact-form.component";
+import { FollowMeComponent } from "../follow-me/follow-me.component";
 import { SectionComponent } from "./section.component";
 
 describe("SectionComponent", () => {
@@ -12,7 +13,10 @@ describe("SectionComponent", () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SectionComponent, MockComponent(ContactFormComponent)],
+      declarations: [
+        SectionComponent,
+        MockComponents(ContactFormComponent, FollowMeComponent),
+      ],
       imports: [TranslateModule.forRoot()],
     }).compileComponents();
   }));

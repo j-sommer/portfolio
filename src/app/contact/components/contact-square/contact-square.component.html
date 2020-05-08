@@ -3,6 +3,11 @@
   (mouseover)="isHovering = true"
   (mouseout)="isHovering = false"
   [@hover]="isHovering ? 'hoverIn' : 'hoverOut'"
+  (click)="onClick()"
 >
-  <fa-icon class="contact-provider-icon" [icon]="['fab', contactProvider]" size="lg"></fa-icon>
+  <fa-icon
+    class="contact-provider-icon"
+    [icon]="['fab', contactProvider]"
+    size="lg"
+  ></fa-icon>
 </div>

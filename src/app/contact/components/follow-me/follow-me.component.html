@@ -1,0 +1,63 @@
+<div class="follow-me">
+  <p class="follow-me__info-text" data-aos="fade-in" data-aos-duration="500">
+    {{ "contact.follow-me.info-text" | translate }}
+  </p>
+  <div class="follow-me__provider">
+    <mat-grid-list
+      cols="4"
+      rowHeight="1:1"
+      [gutterSize]="'10px'"
+      style="flex-grow: 1;"
+    >
+      <mat-grid-tile>
+        <app-contact-square
+          [targetUrl]="'https://github.com/j-sommer'"
+          [contactProvider]="ContactProvider.GitHub"
+          matTooltip="github.com"
+          [matTooltipShowDelay]="tooltipDelayInMs"
+          [matTooltipPosition]="tooltipPosition"
+          data-aos="fade-up"
+          data-aos-duration="500"
+        ></app-contact-square>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-contact-square
+          [targetUrl]="'https://www.linkedin.com/in/jan-sommer/'"
+          [contactProvider]="ContactProvider.LinkedIn"
+          matTooltip="linkedin.com"
+          [matTooltipShowDelay]="tooltipDelayInMs"
+          [matTooltipPosition]="tooltipPosition"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="100"
+        >
+        </app-contact-square
+      ></mat-grid-tile>
+      <mat-grid-tile>
+        <app-contact-square
+          [targetUrl]="'https://codepen.io/j-sommer'"
+          [contactProvider]="ContactProvider.CodePen"
+          matTooltip="codepen.io"
+          [matTooltipShowDelay]="tooltipDelayInMs"
+          [matTooltipPosition]="tooltipPosition"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="200"
+        >
+        </app-contact-square>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-contact-square
+          [targetUrl]="'https://medium.com/@jansommer993'"
+          [contactProvider]="ContactProvider.Medium"
+          matTooltip="medium.com"
+          [matTooltipShowDelay]="tooltipDelayInMs"
+          [matTooltipPosition]="tooltipPosition"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="300"
+        ></app-contact-square>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>

@@ -11,9 +11,14 @@
 
     &__section {
       min-height: 100vh;
+
+      &--contact {
+        min-height: 85vh;
+      }
     }
 
     &__footer {
+      width: 100%;
       position: absolute;
       bottom: 0;
     }

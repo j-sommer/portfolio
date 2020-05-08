@@ -1,15 +1,6 @@
-:host {
-  display: flex;
-  justify-content: center;
-  height: 5rem;
-  bottom: 0;
-  width: 100%;
-}
+@import "./../../theme.scss";
 
-#contact-list {
-  width: 14rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.footer {
+  height: 15vh;
+  background-color: mat-color($portfolio-primary);
 }

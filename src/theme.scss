@@ -6,7 +6,7 @@ $portfolio-accent: mat-palette($mat-deep-orange, A200, A100, A400);
 
 $portfolio-warn: mat-palette($mat-red);
 
-$portfolio-theme: mat-light-theme(
+$portfolio-theme: mat-dark-theme(
   $portfolio-primary,
   $portfolio-accent,
   $portfolio-warn
@@ -44,6 +44,9 @@ body {
 
 h1 {
   text-align: center;
+  margin-right: auto !important;
+  margin-left: auto !important;
+  width: fit-content;
 }
 
 .mat-success {

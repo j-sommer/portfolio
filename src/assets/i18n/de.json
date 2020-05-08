@@ -40,6 +40,9 @@
           "placeholder": "Hier können Sie Ihre Nachricht verfassen"
         }
       }
+    },
+    "follow-me": {
+      "info-text": "Folge mir auf"
     }
   }
 }
