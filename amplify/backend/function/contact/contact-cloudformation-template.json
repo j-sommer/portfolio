@@ -33,12 +33,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "email",
+            "contact",
             {
               "Fn::Join": [
                 "",
                 [
-                  "email",
+                  "contact",
                   "-",
                   {
                     "Ref": "env"
@@ -65,7 +65,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-portfolio-dev-121917-deployment",
-          "S3Key": "amplify-builds/email-6e59497a4e4c5a516363-build.zip"
+          "S3Key": "amplify-builds/contact-476c666b4b754d584163-build.zip"
         }
       }
     },
@@ -75,12 +75,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "portfolioLambdaRole08331a55",
+            "portfolioLambdaRole58d7132c",
             {
               "Fn::Join": [
                 "",
                 [
-                  "portfolioLambdaRole08331a55",
+                  "portfolioLambdaRole58d7132c",
                   "-",
                   {
                     "Ref": "env"

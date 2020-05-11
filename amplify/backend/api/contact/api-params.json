@@ -1,18 +1,18 @@
 {
   "paths": [
     {
-      "name": "/email",
-      "lambdaFunction": "email",
+      "name": "/contact",
+      "lambdaFunction": "contact",
       "privacy": {
         "open": true
       }
     }
   ],
-  "resourceName": "email",
-  "apiName": "email",
+  "resourceName": "contact",
+  "apiName": "contact",
   "functionArns": [
     {
-      "lambdaFunction": "email"
+      "lambdaFunction": "contact"
     }
   ],
   "privacy": {
@@ -24,7 +24,7 @@
   "dependsOn": [
     {
       "category": "function",
-      "resourceName": "email",
+      "resourceName": "contact",
       "attributes": ["Name", "Arn"]
     }
   ]

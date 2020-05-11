@@ -13,14 +13,14 @@
       "Type": "String"
     },
 
-    "functionemailName": {
+    "functioncontactName": {
       "Type": "String",
-      "Default": "functionemailName"
+      "Default": "functioncontactName"
     },
 
-    "functionemailArn": {
+    "functioncontactArn": {
       "Type": "String",
-      "Default": "functionemailArn"
+      "Default": "functioncontactArn"
     }
   },
   "Conditions": {
@@ -34,16 +34,16 @@
     }
   },
   "Resources": {
-    "email": {
+    "contact": {
       "Type": "AWS::ApiGateway::RestApi",
       "Properties": {
         "Description": "",
-        "Name": "email",
+        "Name": "contact",
         "Body": {
           "swagger": "2.0",
           "info": {
             "version": "2018-05-24T17:52:00Z",
-            "title": "email"
+            "title": "contact"
           },
           "host": {
             "Fn::Join": [
@@ -76,7 +76,7 @@
           },
           "schemes": ["https"],
           "paths": {
-            "/email": {
+            "/contact": {
               "options": {
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
@@ -153,7 +153,7 @@
                         ":lambda:path/2015-03-31/functions/",
 
                         {
-                          "Ref": "functionemailArn"
+                          "Ref": "functioncontactArn"
                         },
 
                         "/invocations"
@@ -166,7 +166,7 @@
                 }
               }
             },
-            "/email/{proxy+}": {
+            "/contact/{proxy+}": {
               "options": {
                 "consumes": ["application/json"],
                 "produces": ["application/json"],
@@ -243,7 +243,7 @@
                         ":lambda:path/2015-03-31/functions/",
 
                         {
-                          "Ref": "functionemailArn"
+                          "Ref": "functioncontactArn"
                         },
 
                         "/invocations"
@@ -292,11 +292,11 @@
       }
     },
 
-    "functionemailPermissionemail": {
+    "functioncontactPermissioncontact": {
       "Type": "AWS::Lambda::Permission",
       "Properties": {
         "FunctionName": {
-          "Ref": "functionemailName"
+          "Ref": "functioncontactName"
         },
 
         "Action": "lambda:InvokeFunction",
@@ -315,7 +315,7 @@
               },
               ":",
               {
-                "Ref": "email"
+                "Ref": "contact"
               },
               "/*/*/*"
             ]
@@ -324,7 +324,7 @@
       }
     },
 
-    "DeploymentAPIGWemail": {
+    "DeploymentAPIGWcontact": {
       "Type": "AWS::ApiGateway::Deployment",
       "Properties": {
         "Description": "The Development stage deployment of your API.",
@@ -338,7 +338,7 @@
           ]
         },
         "RestApiId": {
-          "Ref": "email"
+          "Ref": "contact"
         }
       }
     }
@@ -351,7 +351,7 @@
           "",
           [
             "https://",
-            { "Ref": "email" },
+            { "Ref": "contact" },
             ".execute-api.",
             { "Ref": "AWS::Region" },
             ".amazonaws.com/",
@@ -368,11 +368,11 @@
     },
     "ApiName": {
       "Description": "API Friendly name",
-      "Value": "email"
+      "Value": "contact"
     },
     "ApiId": {
       "Description": "API ID (prefix of API URL)",
-      "Value": { "Ref": "email" }
+      "Value": { "Ref": "contact" }
     }
   }
 }
