@@ -1,0 +1,31 @@
+{
+  "paths": [
+    {
+      "name": "/contact",
+      "lambdaFunction": "contact",
+      "privacy": {
+        "open": true
+      }
+    }
+  ],
+  "resourceName": "contact",
+  "apiName": "contact",
+  "functionArns": [
+    {
+      "lambdaFunction": "contact"
+    }
+  ],
+  "privacy": {
+    "auth": 0,
+    "unauth": 0,
+    "authRoleName": "amplify-portfolio-dev-121917-authRole",
+    "unAuthRoleName": "amplify-portfolio-dev-121917-unauthRole"
+  },
+  "dependsOn": [
+    {
+      "category": "function",
+      "resourceName": "contact",
+      "attributes": ["Name", "Arn"]
+    }
+  ]
+}

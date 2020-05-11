@@ -6,7 +6,7 @@ import { ContactRequest } from "../models/contact-request.model";
 
 @Injectable()
 export class ContactService {
-  private readonly apiUrl = "http://localhost:8000";
+  private readonly apiUrl = "http://localhost:3000/contact";
 
   constructor(private httpClient: HttpClient) {}
 
