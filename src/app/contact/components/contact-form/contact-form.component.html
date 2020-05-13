@@ -82,7 +82,7 @@
       mat-raised-button
       class="contact-form__form__submit"
       [color]="submitColor"
-      [disabled]="formGroup.invalid"
+      [disabled]="formGroup.invalid || isSending"
     >
       {{ "contact.contact-form.form.submit" | translate }}
       <mat-icon [inline]="true">{{ submitIconContent }}</mat-icon>
