@@ -3,4 +3,12 @@
 .footer {
   height: 15vh;
   background-color: mat-color($portfolio-primary);
+  display: flex;
+
+  &__to-top-button {
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateY(-50%);
+  }
 }
