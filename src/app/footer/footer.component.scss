@@ -4,11 +4,26 @@
   height: 15vh;
   background-color: mat-color($portfolio-primary);
   display: flex;
+  flex-direction: column;
+  padding-bottom: 1vh;
 
   &__to-top-button {
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-50%);
+  }
+
+  &__copyright {
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      margin-right: 6px;
+      transform: scale(0.8);
+    }
   }
 }
