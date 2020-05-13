@@ -21,23 +21,23 @@
   "contact": {
     "header": "Kontakt",
     "contact-form": {
-      "info-text": "Haben Sie Fragen? Kontaktieren Sie mich!",
+      "info-text": "Hast du Fragen? Sende mir einfach eine Kontaktanfrage!",
       "form": {
         "submit": "Senden",
         "name-field": {
-          "label": "Name",
-          "placeholder": "Bitte hier Ihren Namen eingeben",
+          "label": "Name*",
+          "placeholder": "Bitte hier deinen Namen eingeben",
           "required": "Bitte Pflichtfeld füllen!"
         },
         "email-field": {
-          "label": "E-Mail",
-          "placeholder": "Hier bitte Ihre E-Mail-Adresse eingeben",
+          "label": "E-Mail*",
+          "placeholder": "Gib hier bitte deine E-Mail ein",
           "required": "Bitte Pflichtfeld füllen!",
           "invalid": "Bitte eine valide E-Mail-Adresse eingeben!"
         },
         "message-field": {
           "label": "Nachricht",
-          "placeholder": "Hier können Sie Ihre Nachricht verfassen"
+          "placeholder": "Hier kannst du deine Nachricht verfassen"
         }
       }
     },

@@ -1,23 +1,24 @@
 import { DebugElement } from "@angular/core";
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormGroup, ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatInputModule } from "@angular/material/input";
 import { By } from "@angular/platform-browser";
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { TranslateModule } from "@ngx-translate/core";
+import { of } from "rxjs";
+import { ColorType } from "shared/models/enums/color-type.enum";
 
 import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
 import { ContactFormComponent } from "./contact-form.component";
-import { of } from "rxjs";
-import { ColorType } from "shared/models/enums/color-type.enum";
 
 jest.mock("../../services/contact.service");
 
 describe("ContactFormComponent", () => {
   let component: ContactFormComponent;
+  let contactService: ContactService;
 
   describe("With Template", () => {
     let fixture: ComponentFixture<ContactFormComponent>;
@@ -38,6 +39,8 @@ describe("ContactFormComponent", () => {
     }));
 
     beforeEach(() => {
+      contactService = TestBed.inject(ContactService);
+
       fixture = TestBed.createComponent(ContactFormComponent);
       component = fixture.componentInstance;
       fixture.detectChanges();
@@ -89,6 +92,10 @@ describe("ContactFormComponent", () => {
           expect(submitButtonElement).toBeTruthy();
           expect(submitButtonElement.nativeElement.textContent).toContain(
             expectedContent
+          );
+
+          it.todo(
+            "should disable the submit button when sending the contact request"
           );
         });
 

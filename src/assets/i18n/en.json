@@ -25,12 +25,12 @@
       "form": {
         "submit": "Send",
         "name-field": {
-          "label": "Name",
+          "label": "Name*",
           "placeholder": "Please enter your name",
           "required": "required"
         },
         "email-field": {
-          "label": "Email",
+          "label": "Email*",
           "placeholder": "Please enter your email address",
           "required": "required",
           "invalid": "Please enter a valid email address"

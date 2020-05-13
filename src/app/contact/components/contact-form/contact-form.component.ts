@@ -2,10 +2,10 @@ import { Component } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 import { first } from "rxjs/operators";
 import { ErrorStateInvalidFieldMatcher } from "shared/form-error-matcher/error-state-dirty-field/error-state-invalid-field.matcher";
+import { ColorType } from "shared/models/enums/color-type.enum";
 
 import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
-import { ColorType } from "shared/models/enums/color-type.enum";
 
 @Component({
   selector: "app-contact-form",
@@ -30,11 +30,15 @@ export class ContactFormComponent {
     message: this.messageFieldControl,
   });
 
+  public isSending = false;
+
   public submitIconContent = "email";
   public submitColor: ColorType = ColorType.Primery;
 
   public onSend(form: FormGroup): void {
     const formResult: ContactRequest = form.value;
+
+    this.isSending = true;
 
     this.contactService
       .sendContactRequest(formResult)
@@ -46,11 +50,13 @@ export class ContactFormComponent {
   }
 
   private onSendSuccess(): void {
+    this.isSending = false;
     this.submitIconContent = "done";
     this.submitColor = ColorType.Success;
   }
 
   private onSendError(): void {
+    this.isSending = false;
     this.submitIconContent = "error";
     this.submitColor = ColorType.Warn;
   }
