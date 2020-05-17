@@ -1,4 +1,13 @@
 {
+  "home": {
+    "title": {
+      "sub-title": {
+        "software-developer": "Softwareentwickler",
+        "full-stack-developer": "Full-Stack-Webentwickler",
+        "vr-enthusiast": "VR-Enthusiast"
+      }
+    }
+  },
   "core": {
     "header": {
       "menu-entries": {
@@ -15,7 +24,21 @@
     }
   },
   "about": {
-    "header": "Über Mich"
+    "header": "Über Mich",
+    "description": {
+      "introduction": "Hi ich bin Jan, Softwareentwickler und ich lebe in Warendorf. ",
+      "main": "2018 habe ich an der Hochschule Rhein-Waal meinen Abschluss des Studiums 'Medien- und Kommunikationsinformatik' abgeschlossen.\n\n Bei Projekten steht für mich klar das Produkt im Fokus. Dabei lege ich besonders viel Wert auf Usability. In der Entwicklung ist mir Clearn Code von großer Bedeutung um hohe Wartbarkeit gewährleisten zu können.",
+      "additional-information": "Neben meinem Beruf als Softwareentickler mache ich gerne zum Ausgleich Sport."
+    },
+    "experience": {
+      "header": "Erfahrung",
+      "list-header": {
+        "programming-languages": "Programmiersprachen",
+        "web-development": "Webentwicklung",
+        "frameworks": "Frameworks",
+        "tools": "Tools"
+      }
+    }
   },
   "projects": { "header": "Projekte" },
   "contact": {

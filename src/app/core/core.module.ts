@@ -12,6 +12,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { MenuDesktopComponent } from "./components/header/menus/desktop/menu-desktop.component";
 import { MenuMobileComponent } from "./components/header/menus/mobile/menu-mobile.component";
 import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.component";
+import { ScrollService } from "./services/scroll.service";
 
 @NgModule({
   declarations: [
@@ -31,5 +32,6 @@ import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.com
     TranslateModule,
   ],
   exports: [HeaderComponent],
+  providers: [ScrollService],
 })
 export class CoreModule {}

@@ -1,8 +1,17 @@
 {
+  "home": {
+    "title": {
+      "sub-title": {
+        "software-developer": "Software Developer",
+        "full-stack-developer": "Full Stack Web Developer",
+        "vr-enthusiast": "VR Enthusiast"
+      }
+    }
+  },
   "core": {
     "header": {
       "menu-entries": {
-        "about": "About",
+        "about": "About Me",
         "projects": "Projects",
         "contact": "Contact",
         "legal-notice": "Legal Notice",
@@ -15,7 +24,21 @@
     }
   },
   "about": {
-    "header": "About"
+    "header": "About Me",
+    "description": {
+      "introduction": "Hi I'm Jan and I'm a software developer based in Warendorf, Germany.",
+      "main": "",
+      "additional-information": ""
+    },
+    "experience": {
+      "header": "Erfahrung",
+      "list-header": {
+        "programming-languages": "Programming Languages",
+        "web-development": "Web Development",
+        "frameworks": "Frameworks",
+        "tools": "Tools"
+      }
+    }
   },
   "projects": { "header": "Projects" },
   "contact": {

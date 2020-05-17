@@ -3,10 +3,11 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatIconModule } from "@angular/material/icon";
 import { MatMenuModule } from "@angular/material/menu";
 import { RouterTestingModule } from "@angular/router/testing";
+import { TranslateModule } from "@ngx-translate/core";
+import { ScrollService } from "core/services/scroll.service";
 import { MockModule } from "ng-mocks";
 
 import { MenuMobileComponent } from "./menu-mobile.component";
-import { TranslateModule } from "@ngx-translate/core";
 
 describe("MenuMobileComponent", () => {
   let component: MenuMobileComponent;
@@ -24,6 +25,7 @@ describe("MenuMobileComponent", () => {
           MockModule(MatMenuModule),
           TranslateModule.forRoot(),
         ],
+        providers: [ScrollService],
       }).compileComponents();
 
       fixture = TestBed.createComponent(MenuMobileComponent);

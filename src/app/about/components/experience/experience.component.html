@@ -1,0 +1,36 @@
+<div class="experience">
+  <h2 class="experience__header">
+    {{ "about.experience.header" | translate }}
+  </h2>
+  <div class="experience__content">
+    <div class="experience__content__list">
+      <app-experience-list
+        [header]="
+          'about.experience.list-header.programming-languages' | translate
+        "
+        [experienceItems]="programmingLanguageItems"
+      ></app-experience-list>
+    </div>
+
+    <div class="experience__content__list">
+      <app-experience-list
+        [header]="'about.experience.list-header.web-development' | translate"
+        [experienceItems]="webDevelopmentItems"
+      ></app-experience-list>
+    </div>
+
+    <div class="experience__content__list">
+      <app-experience-list
+        [header]="'about.experience.list-header.frameworks' | translate"
+        [experienceItems]="frameworkItems"
+      ></app-experience-list>
+    </div>
+
+    <div class="experience__content__list">
+      <app-experience-list
+        [header]="'about.experience.list-header.tools' | translate"
+        [experienceItems]="toolsItems"
+      ></app-experience-list>
+    </div>
+  </div>
+</div>

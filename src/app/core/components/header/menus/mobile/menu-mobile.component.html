@@ -11,8 +11,7 @@
     <button
       mat-menu-item
       *ngFor="let section of sectionSet"
-      routerLink="."
-      [fragment]="section"
+      (click)="scrollTo(section)"
     >
       {{ "core.header.menu-entries." + section | translate }}
     </button>

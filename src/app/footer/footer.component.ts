@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { ScrollService } from "core/services/scroll.service";
+import { Section } from "shared/models/enums/section.enum";
 
 @Component({
   selector: "app-footer",
@@ -6,7 +8,9 @@ import { Component } from "@angular/core";
   styleUrls: ["./footer.component.scss"],
 })
 export class FooterComponent {
+  constructor(private scrollService: ScrollService) {}
+
   public scrollToTop(): void {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    this.scrollService.scrollTo(Section.Home);
   }
 }

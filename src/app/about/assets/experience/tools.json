@@ -1,0 +1,21 @@
+[
+  {
+    "text": "Git",
+    "icon": "git",
+    "isDevIcon": true
+  },
+  {
+    "text": "Docker",
+    "icon": "docker",
+    "isDevIcon": true
+  },
+  {
+    "text": "Unity 3D",
+    "icon": "unity"
+  },
+  {
+    "text": "Photoshop",
+    "icon": "photoshop",
+    "isDevIcon": true
+  }
+]

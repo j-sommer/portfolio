@@ -3,6 +3,7 @@ import { Section } from "shared/models/enums/section.enum";
 import { LanguageService } from "shared/services/language/language.service";
 
 import { MenuComponent } from "../menu.component";
+import { ScrollService } from "core/services/scroll.service";
 
 @Component({
   selector: "app-menu-desktop",
@@ -12,7 +13,10 @@ import { MenuComponent } from "../menu.component";
 export class MenuDesktopComponent extends MenuComponent {
   @Input() public sectionSet: Set<Section>;
 
-  constructor(protected languageService: LanguageService) {
-    super(languageService);
+  constructor(
+    protected languageService: LanguageService,
+    protected scrollService: ScrollService
+  ) {
+    super(languageService, scrollService);
   }
 }
