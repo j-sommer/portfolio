@@ -10,6 +10,8 @@ import { HeaderComponent } from "./core/components/header/header.component";
 import { FooterComponent } from "./footer/footer.component";
 import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
+import { ScrollService } from "core/services/scroll.service";
+import { ResolutionService } from "core/services/resolution.service";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {
@@ -26,6 +28,7 @@ describe("AppComponent", () => {
         MockModule(HomeModule),
         TranslateModule.forRoot(),
       ],
+      providers: [ScrollService, ResolutionService],
     }).compileComponents();
   }));
 

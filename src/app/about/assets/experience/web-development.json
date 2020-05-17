@@ -1,0 +1,12 @@
+[
+  { "text": "HTML", "icon": "html5" },
+  {
+    "text": "CSS",
+    "icon": "css3"
+  },
+  {
+    "text": "SASS",
+    "icon": "sass",
+    "isDevIcon": true
+  }
+]

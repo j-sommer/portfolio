@@ -1,0 +1,20 @@
+[
+  {
+    "text": "Typescript",
+    "icon": "typescript",
+    "isDevIcon": true
+  },
+  {
+    "text": "Javascript",
+    "icon": "js"
+  },
+  {
+    "text": "C#",
+    "icon": "csharp",
+    "isDevIcon": true
+  },
+  {
+    "text": "Java",
+    "icon": "java"
+  }
+]

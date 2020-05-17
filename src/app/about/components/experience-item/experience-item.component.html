@@ -1,0 +1,14 @@
+<mat-list-item>
+  <i
+    *ngIf="isDevIcon"
+    class="devicon-{{ icon }}-plain experience-icon"
+    mat-list-icon
+  ></i>
+  <fa-icon
+    class="experience-icon"
+    *ngIf="!isDevIcon"
+    [icon]="['fab', icon]"
+    mat-list-icon
+  ></fa-icon>
+  <div mat-line>{{ text }}</div>
+</mat-list-item>

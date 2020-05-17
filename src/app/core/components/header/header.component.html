@@ -6,9 +6,15 @@
     'is-stuck': !isSticky
   }"
 >
-  <h3 class="toolbar__header">JS</h3>
+  <h3 class="toolbar__header" (click)="scrollToHome()">JS</h3>
 
-  <div *ngIf="isMobileResolution; then mobileView; else desktopView"></div>
+  <div
+    *ngIf="
+      (currentViewSize$ | async).isMobileResolution;
+      then mobileView;
+      else desktopView
+    "
+  ></div>
 
   <ng-template #mobileView>
     <div class="toolbar__menu">

@@ -27,7 +27,8 @@
             "styles": [
               "./node_modules/aos/dist/aos.css",
               "src/styles.scss",
-              "src/theme.scss"
+              "src/theme.scss",
+              "./node_modules/devicon/devicon.css"
             ],
             "scripts": []
           },

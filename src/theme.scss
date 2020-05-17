@@ -32,6 +32,35 @@ $custom-typography: mat-typography-config(
 @include angular-material-theme($portfolio-theme);
 @include angular-material-typography($custom-typography);
 
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -46,7 +75,20 @@ h1 {
   text-align: center;
   margin-right: auto !important;
   margin-left: auto !important;
+  margin-bottom: 4vh !important;
   width: fit-content;
+}
+
+h1::before,
+h1::after {
+  @include md {
+    display: inline-block;
+    content: "";
+    border-top: 1px solid mat-color($portfolio-theme, text);
+    width: 8vw;
+    margin: 0 3rem;
+    transform: translateY(-1rem);
+  }
 }
 
 .mat-success {

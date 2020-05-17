@@ -1,0 +1,11 @@
+[
+  {
+    "text": "Angular",
+    "icon": "angular"
+  },
+  {
+    "text": "Node.js",
+    "icon": "nodejs",
+    "isDevIcon": true
+  }
+]

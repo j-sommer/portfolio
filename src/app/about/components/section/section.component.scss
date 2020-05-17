@@ -1,0 +1,8 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  &__description {
+    margin-bottom: 5vh;
+  }
+}
