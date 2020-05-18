@@ -26,9 +26,9 @@
   "about": {
     "header": "Über Mich",
     "description": {
-      "introduction": "Hi ich bin Jan, Softwareentwickler und ich lebe in Warendorf. ",
+      "introduction": "Hi ich bin Jan, Softwareentwickler und ich lebe in Warendorf.",
       "main": "2018 habe ich an der Hochschule Rhein-Waal meinen Abschluss des Studiums 'Medien- und Kommunikationsinformatik' abgeschlossen.\n\n Bei Projekten steht für mich klar das Produkt im Fokus. Dabei lege ich besonders viel Wert auf Usability. In der Entwicklung ist mir Clearn Code von großer Bedeutung um hohe Wartbarkeit gewährleisten zu können.",
-      "additional-information": "Neben meinem Beruf als Softwareentickler mache ich gerne zum Ausgleich Sport."
+      "additional-information": "Neben meinem Beruf als Softwareentickler mache ich gerne zum Ausgleich Sport - sei es das Fitnessstudio, Bouldern oder Laufen - hauptsache in Bewegung bleiben."
     },
     "experience": {
       "header": "Erfahrung",
@@ -40,7 +40,15 @@
       }
     }
   },
-  "projects": { "header": "Projekte" },
+  "projects": {
+    "header": "Projekte",
+    "visit": "aufrufen",
+    "portfolio": {
+      "title": "Portfolio",
+      "sub-title": "Webseite",
+      "description": "Ihr könnt den Code, der hinter dieser Webseite steckt, auf GitHub finden"
+    }
+  },
   "contact": {
     "header": "Kontakt",
     "contact-form": {
