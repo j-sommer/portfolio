@@ -1,1 +1,10 @@
 <h1>{{ "projects.header" | translate }}</h1>
+
+<app-projects-item
+  [title]="'projects.portfolio.title' | translate"
+  [subTitle]="'projects.portfolio.sub-title' | translate"
+  [description]="'projects.portfolio.description' | translate"
+  [imagePath]="'/assets/images/projects/portfolio.jpg'"
+  [tags]="['Angular', 'Typescript']"
+  [link]="'https://github.com/j-sommer/portfolio'"
+></app-projects-item>

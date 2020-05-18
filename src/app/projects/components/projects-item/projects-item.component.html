@@ -1,0 +1,55 @@
+<mat-card
+  class="projects-item"
+  data-aos="fade-up"
+  data-aos-duration="500"
+  data-aos-delay="600"
+  (mouseenter)="isHovering = true"
+  (mouseleave)="isHovering = false"
+>
+  <div class="projects-item__content" [ngClass]="{ hover: isHovering }">
+    <mat-card-header class="projects-item__header">
+      <mat-card-title>{{ title }}</mat-card-title>
+      <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <div>
+      <img
+        mat-card-image
+        [src]="imagePath"
+        alt="Screenshot of Portfolio Website"
+      />
+    </div>
+    <mat-card-content>
+      <p>
+        {{ description }}
+      </p>
+
+      <mat-chip-list>
+        <mat-chip *ngFor="let tag of tags" color="primary" selected>{{
+          tag
+        }}</mat-chip>
+      </mat-chip-list>
+    </mat-card-content>
+  </div>
+
+  <div
+    *ngIf="!(currentSize$ | async).isMobileResolution"
+    class="projects-item__overlay"
+    [ngClass]="{ hover: isHovering }"
+  >
+    <a mat-raised-button color="primary" [href]="link">
+      <mat-icon>link</mat-icon>
+      {{ "projects.visit" | translate }}
+    </a>
+  </div>
+
+  <mat-card-actions
+    *ngIf="(currentSize$ | async).isMobileResolution"
+    class="projects-item__actions"
+  >
+    <a mat-raised-button color="primary" [href]="link">
+      <mat-icon>link</mat-icon>
+      {{ "projects.visit" | translate }}
+    </a>
+  </mat-card-actions>
+</mat-card>

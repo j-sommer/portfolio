@@ -40,7 +40,15 @@
       }
     }
   },
-  "projects": { "header": "Projects" },
+  "projects": {
+    "header": "Projects",
+    "visit": "visit",
+    "portfolio": {
+      "title": "Portfolio",
+      "sub-title": "Website",
+      "description": "You can find the code which drives this website on GitHub."
+    }
+  },
   "contact": {
     "header": "Contact",
     "contact-form": {
