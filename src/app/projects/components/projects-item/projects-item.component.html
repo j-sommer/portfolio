@@ -1,0 +1,36 @@
+<mat-card
+  class="projects-item"
+  data-aos="fade-up"
+  data-aos-duration="500"
+  data-aos-delay="800"
+>
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+    <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <div class="projects-item__image-container">
+    <img
+      mat-card-image
+      [src]="imagePath"
+      alt="Screenshot of Portfolio Website"
+    />
+    <div class="projects-item__image-container__overlay">
+      <button mat-stroked-button color="accent">
+        <mat-icon>link</mat-icon>
+        Visit
+      </button>
+    </div>
+  </div>
+  <mat-card-content>
+    <p>
+      {{ description }}
+    </p>
+
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of tags" color="primary" selected>{{
+        tag
+      }}</mat-chip>
+    </mat-chip-list>
+  </mat-card-content>
+</mat-card>
