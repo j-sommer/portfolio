@@ -1,17 +1,17 @@
 import { async, TestBed } from "@angular/core/testing";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
+import { FooterComponent } from "core/components/footer/footer.component";
+import { ResolutionService } from "core/services/resolution.service";
+import { ScrollService } from "core/services/scroll.service";
 import { MockComponents, MockModule } from "ng-mocks";
 
 import { AboutModule } from "./about/about.module";
 import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { HeaderComponent } from "./core/components/header/header.component";
-import { FooterComponent } from "./footer/footer.component";
 import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
-import { ScrollService } from "core/services/scroll.service";
-import { ResolutionService } from "core/services/resolution.service";
 
 describe("AppComponent", () => {
   beforeEach(async(() => {

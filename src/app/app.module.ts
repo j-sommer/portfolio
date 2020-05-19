@@ -14,7 +14,6 @@ import { AboutModule } from "./about/about.module";
 import { AppComponent } from "./app.component";
 import { ContactModule } from "./contact/contact.module";
 import { CoreModule } from "./core/core.module";
-import { FooterModule } from "./footer/footer.module";
 import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
 import { RoutingModule } from "./routing/routing.module";
@@ -24,7 +23,6 @@ import { RoutingModule } from "./routing/routing.module";
   imports: [
     BrowserModule,
     CoreModule,
-    FooterModule,
     ContactModule,
     AboutModule,
     ProjectsModule,

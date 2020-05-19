@@ -14,13 +14,16 @@
         "about": "Über Mich",
         "projects": "Projekte",
         "contact": "Kontakt",
-        "legal-notice": "Impressum",
         "language": "Sprache"
       },
       "language-selection": {
         "german": "Deutsch",
         "english": "Englisch"
       }
+    },
+    "footer": {
+      "legal-notice": "Impressum",
+      "privacy-statement": "Datenschutzerklärung"
     }
   },
   "about": {

@@ -1,9 +1,9 @@
 import { Component, Input } from "@angular/core";
+import { ScrollService } from "core/services/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 import { LanguageService } from "shared/services/language/language.service";
 
 import { MenuComponent } from "../menu.component";
-import { ScrollService } from "core/services/scroll.service";
 
 @Component({
   selector: "app-menu-mobile",

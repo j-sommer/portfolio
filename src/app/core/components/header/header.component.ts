@@ -1,9 +1,11 @@
-import { Component, HostListener, Input, ViewChild } from "@angular/core";
+import { Component, Input, ViewChild } from "@angular/core";
+import { MatBottomSheet } from "@angular/material/bottom-sheet";
 import { MatToolbar } from "@angular/material/toolbar";
-import { ScrollService } from "core/services/scroll.service";
-import { resolution } from "shared/constants/resolution.const";
-import { Section } from "shared/models/enums/section.enum";
 import { ResolutionService } from "core/services/resolution.service";
+import { ScrollService } from "core/services/scroll.service";
+import { Section } from "shared/models/enums/section.enum";
+
+import { LegalNoticeComponent } from "../legal-notice/legal-notice.component";
 
 @Component({
   selector: "app-header",
