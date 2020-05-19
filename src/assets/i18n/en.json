@@ -21,6 +21,10 @@
         "german": "German",
         "english": "English"
       }
+    },
+    "footer": {
+      "legal-notice": "Legal Notice",
+      "privacy-statement": "Privacy Statement"
     }
   },
   "about": {

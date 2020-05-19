@@ -1,4 +1,4 @@
-@import "./../../theme.scss";
+@import "./../../../../theme.scss";
 
 .footer {
   height: 15vh;
@@ -20,10 +20,16 @@
     margin-right: auto;
     display: flex;
     align-items: center;
+    justify-content: center;
 
     &__icon {
       margin-right: 6px;
       transform: scale(0.8);
     }
+  }
+
+  &__legal {
+    display: flex;
+    justify-content: center;
   }
 }

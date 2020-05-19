@@ -8,3 +8,33 @@
   margin-right: auto;
   box-shadow: 2px 2px 2px 0px #000000;
 }
+
+.custom-overlay-backdrop {
+  backdrop-filter: blur(4px) saturate(0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.custom-overlay-panel {
+  width: 90vw;
+  height: 90vh;
+  text-align: justify;
+  font-size: smaller;
+  overflow-wrap: anywhere;
+
+  @include md {
+    width: 70vw;
+    height: 80vh;
+  }
+
+  &--small {
+    width: 90vw;
+    height: 90vh;
+    text-align: justify;
+    font-size: smaller;
+
+    @include md {
+      width: 50vw;
+      height: 40vh;
+    }
+  }
+}

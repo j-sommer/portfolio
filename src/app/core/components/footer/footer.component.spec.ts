@@ -1,7 +1,9 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 import { MatButtonModule } from "@angular/material/button";
+import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
 import { By } from "@angular/platform-browser";
+import { TranslateModule } from "@ngx-translate/core";
 import { ScrollService } from "core/services/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 
@@ -16,7 +18,12 @@ describe("FooterComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [FooterComponent],
-      imports: [MatButtonModule, MatIconModule],
+      imports: [
+        MatButtonModule,
+        MatIconModule,
+        MatDialogModule,
+        TranslateModule.forRoot(),
+      ],
       providers: [ScrollService],
     }).compileComponents();
   }));
