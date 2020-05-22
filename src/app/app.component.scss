@@ -3,7 +3,7 @@
   display: block;
 
   &__header {
-    z-index: 5;
+    z-index: 10;
   }
 
   &__content {
@@ -11,8 +11,11 @@
 
     &__section {
       min-height: 100vh;
-      padding-left: 5vw;
-      padding-right: 5vw;
+
+      &--padding {
+        padding-left: 5vw;
+        padding-right: 5vw;
+      }
 
       &--contact {
         min-height: 85vh;
