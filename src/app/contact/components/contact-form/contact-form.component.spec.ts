@@ -13,6 +13,7 @@ import { ColorType } from "shared/models/enums/color-type.enum";
 import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
 import { ContactFormComponent } from "./contact-form.component";
+import { MatProgressBarModule } from "@angular/material/progress-bar";
 
 jest.mock("../../services/contact.service");
 
@@ -33,6 +34,7 @@ describe("ContactFormComponent", () => {
           MatInputModule,
           MatIconModule,
           MatButtonModule,
+          MatProgressBarModule,
         ],
         providers: [ContactService],
       }).compileComponents();

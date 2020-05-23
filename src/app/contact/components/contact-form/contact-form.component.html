@@ -8,6 +8,16 @@
     (ngSubmit)="onSend(formGroup)"
     class="contact-form__form"
   >
+    <div
+      *ngIf="formState === FormState.Processing"
+      class="contact-form__form__overlay"
+    >
+      <mat-progress-bar
+        class="contact-form__form__overlay__loading"
+        mode="indeterminate"
+      ></mat-progress-bar>
+    </div>
+
     <div class="contact-form__form__info-fields">
       <mat-form-field
         id="contact-form__form__name-field"
@@ -78,14 +88,34 @@
         "
       ></textarea>
     </mat-form-field>
+
     <button
       mat-raised-button
       class="contact-form__form__submit"
       [color]="submitColor"
-      [disabled]="formGroup.invalid || isSending"
+      [disabled]="
+        formGroup.invalid ||
+        formState === FormState.Processing ||
+        formState === FormState.Success
+      "
     >
-      {{ "contact.contact-form.form.submit" | translate }}
-      <mat-icon [inline]="true">{{ submitIconContent }}</mat-icon>
+      <ng-container [ngSwitch]="formState">
+        <div *ngSwitchCase="FormState.Init">
+          <mat-icon [inline]="true">email</mat-icon>
+          {{ "contact.contact-form.form.submit.button" | translate }}
+        </div>
+        <div *ngSwitchCase="FormState.Processing">
+          {{ "contact.contact-form.form.submit.processing" | translate }}
+        </div>
+        <div *ngSwitchCase="FormState.Success">
+          <mat-icon [inline]="true">done</mat-icon>
+          {{ "contact.contact-form.form.submit.success" | translate }}
+        </div>
+        <div *ngSwitchCase="FormState.Error">
+          <mat-icon [inline]="true">error</mat-icon>
+          {{ "contact.contact-form.form.submit.error" | translate }}
+        </div>
+      </ng-container>
     </button>
   </form>
 </div>
