@@ -7,6 +7,13 @@ import { ColorType } from "shared/models/enums/color-type.enum";
 import { ContactRequest } from "../../models/contact-request.model";
 import { ContactService } from "../../services/contact.service";
 
+enum FormState {
+  Init,
+  Processing,
+  Success,
+  Error,
+}
+
 @Component({
   selector: "app-contact-form",
   templateUrl: "./contact-form.component.html",
@@ -14,6 +21,8 @@ import { ContactService } from "../../services/contact.service";
 })
 export class ContactFormComponent {
   constructor(private contactService: ContactService) {}
+
+  public readonly FormState = FormState;
 
   public nameFieldControl = new FormControl("", [Validators.required]);
   public emailFieldControl = new FormControl("", [
@@ -30,15 +39,14 @@ export class ContactFormComponent {
     message: this.messageFieldControl,
   });
 
-  public isSending = false;
+  public formState = FormState.Init;
 
-  public submitIconContent = "email";
   public submitColor: ColorType = ColorType.Primery;
 
   public onSend(form: FormGroup): void {
     const formResult: ContactRequest = form.value;
 
-    this.isSending = true;
+    this.formState = FormState.Processing;
 
     this.contactService
       .sendContactRequest(formResult)
@@ -50,14 +58,14 @@ export class ContactFormComponent {
   }
 
   private onSendSuccess(): void {
-    this.isSending = false;
-    this.submitIconContent = "done";
+    this.formState = FormState.Success;
     this.submitColor = ColorType.Success;
+
+    this.formGroup.disable();
   }
 
   private onSendError(): void {
-    this.isSending = false;
-    this.submitIconContent = "error";
+    this.formState = FormState.Error;
     this.submitColor = ColorType.Warn;
   }
 }
