@@ -1,7 +1,7 @@
 @import "./../../../../theme.scss";
 
 .footer {
-  height: 15vh;
+  min-height: 15vh;
   background-color: mat-color($portfolio-primary);
   display: flex;
   flex-direction: column;
