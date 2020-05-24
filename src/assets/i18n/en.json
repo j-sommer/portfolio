@@ -30,12 +30,12 @@
   "about": {
     "header": "About Me",
     "description": {
-      "introduction": "Hi I'm Jan and I'm a software developer based in Warendorf, Germany.",
-      "main": "",
-      "additional-information": ""
+      "introduction": "Hi I'm Jan and I'm a software developer based in Warendorf, Germany. I develop applications for all platforms but I prefer the web. When working on a project I focus completely on the product. Therefore I put emphasis on a good design, software architecture and on the code itself to achieve an optimal result.",
+      "main": "2018 I completed my Bachelor's degree at the Rhine-Waal University of Applied Sciences. While and after studying I worked at the Düsseldorf based company Cognigy which develops a conversational automation platform. At the moment I'm working at the software provider Arvato in the e-commerce section.",
+      "additional-information": "Beside developing software I love sport - whether it's running, fitness or bouldering."
     },
     "experience": {
-      "header": "Erfahrung",
+      "header": "Experience In",
       "list-header": {
         "programming-languages": "Programming Languages",
         "web-development": "Web Development",
@@ -50,7 +50,7 @@
     "portfolio": {
       "title": "Portfolio",
       "sub-title": "Website",
-      "description": "You can find the code which drives this website on GitHub."
+      "description": "You can find the code - which this website is based on - on GitHub."
     }
   },
   "contact": {
@@ -65,20 +65,21 @@
             "success": "Thanks!",
             "error": "Error"
           },
-        "name-field": {
-          "label": "Name*",
-          "placeholder": "Please enter your name",
-          "required": "required"
-        },
-        "email-field": {
-          "label": "Email*",
-          "placeholder": "Please enter your email address",
-          "required": "required",
-          "invalid": "Please enter a valid email address"
-        },
-        "message-field": {
-          "label": "Message",
-          "placeholder": "Here you can enter your question"
+          "name-field": {
+            "label": "Name*",
+            "placeholder": "Please enter your name",
+            "required": "required"
+          },
+          "email-field": {
+            "label": "Email*",
+            "placeholder": "Please enter your email address",
+            "required": "required",
+            "invalid": "Please enter a valid email address"
+          },
+          "message-field": {
+            "label": "Message",
+            "placeholder": "Here you can enter your question"
+          }
         }
       }
     },
