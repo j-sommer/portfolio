@@ -20,8 +20,8 @@
       background: url("/assets/images/home/title-background.jpg");
       background-size: cover;
       background-clip: text;
+      -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
-      background-attachment: fixed;
       background-position: 40% 100%;
       position: relative;
       text-align: center;
