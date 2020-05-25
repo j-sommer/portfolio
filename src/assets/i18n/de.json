@@ -57,12 +57,6 @@
     "contact-form": {
       "info-text": "Hast du Fragen? Sende mir einfach eine Kontaktanfrage!",
       "form": {
-        "submit": {
-          "button": "Senden",
-          "processing": "...",
-          "success": "Danke!",
-          "error": "Fehler"
-        },
         "name-field": {
           "label": "Name*",
           "placeholder": "Bitte hier deinen Namen eingeben",
@@ -77,6 +71,12 @@
         "message-field": {
           "label": "Nachricht",
           "placeholder": "Hier kannst du deine Nachricht verfassen"
+        },
+        "submit": {
+          "button": "Senden",
+          "processing": "...",
+          "success": "Danke!",
+          "error": "Fehler"
         }
       }
     },
