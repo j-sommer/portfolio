@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatIconModule } from "@angular/material/icon";
 import { TranslateModule } from "@ngx-translate/core";
 
 import { TitleComponent } from "./title.component";
@@ -10,7 +11,7 @@ describe("TitleComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [TitleComponent],
-      imports: [TranslateModule.forRoot()],
+      imports: [TranslateModule.forRoot(), MatIconModule],
     }).compileComponents();
   }));
 
