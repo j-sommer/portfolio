@@ -1,4 +1,4 @@
-![CI](https://github.com/j-sommer/portfolio/workflows/CI/badge.svg)
+![Build&Test](https://github.com/j-sommer/portfolio/workflows/CI/badge.svg)
 # Portfolio
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
