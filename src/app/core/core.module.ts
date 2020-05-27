@@ -14,8 +14,8 @@ import { HeaderComponent } from "./components/header/header.component";
 import { MenuDesktopComponent } from "./components/header/menus/desktop/menu-desktop.component";
 import { MenuMobileComponent } from "./components/header/menus/mobile/menu-mobile.component";
 import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.component";
-import { ScrollService } from "./services/scroll.service";
 import { PrivacyStatementComponent } from "./components/privacy-statement/privacy-statement.component";
+import { ScrollService } from "./services/scroll.service";
 
 @NgModule({
   declarations: [
@@ -39,6 +39,6 @@ import { PrivacyStatementComponent } from "./components/privacy-statement/privac
   ],
   exports: [HeaderComponent, FooterComponent],
   providers: [ScrollService],
-  entryComponents: [LegalNoticeComponent],
+  entryComponents: [LegalNoticeComponent, PrivacyStatementComponent],
 })
 export class CoreModule {}

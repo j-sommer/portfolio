@@ -2,15 +2,15 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  HostListener,
   OnInit,
   ViewChild,
-  HostListener,
 } from "@angular/core";
 import * as AOS from "aos";
+import { ResolutionService } from "core/services/resolution.service";
 import { ScrollService } from "core/services/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 import { LanguageService } from "shared/services/language/language.service";
-import { ResolutionService } from "core/services/resolution.service";
 
 @Component({
   selector: "app-root",
@@ -18,10 +18,10 @@ import { ResolutionService } from "core/services/resolution.service";
   styleUrls: ["./app.component.scss"],
 })
 export class AppComponent implements OnInit, AfterViewInit {
-  @ViewChild("home") homeSection: ElementRef;
-  @ViewChild("about") aboutSection: ElementRef;
-  @ViewChild("projects") projectsSection: ElementRef;
-  @ViewChild("contact") contactSection: ElementRef;
+  @ViewChild("home") public homeSection: ElementRef;
+  @ViewChild("about") public aboutSection: ElementRef;
+  @ViewChild("projects") public projectsSection: ElementRef;
+  @ViewChild("contact") public contactSection: ElementRef;
 
   public readonly fadeInIdentifier = "fade-in";
   public readonly sectionFadeInDurationInMs = 1000;

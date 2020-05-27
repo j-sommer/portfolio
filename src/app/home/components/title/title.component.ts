@@ -5,4 +5,6 @@ import { Component } from "@angular/core";
   templateUrl: "./title.component.html",
   styleUrls: ["./title.component.scss"],
 })
-export class TitleComponent {}
+export class TitleComponent {
+  public readonly dividerIcon = "brightness_1";
+}
