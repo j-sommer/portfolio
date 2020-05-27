@@ -1,4 +1,5 @@
 {
+  "providers": ["awscloudformation"],
   "projectName": "portfolio",
   "version": "3.0",
   "frontend": "javascript",
@@ -7,9 +8,8 @@
     "config": {
       "SourceDir": "src",
       "DistributionDir": "dist",
-      "BuildCommand": "npm run build",
+      "BuildCommand": "ng build",
       "StartCommand": "ng serve"
     }
-  },
-  "providers": ["awscloudformation"]
+  }
 }

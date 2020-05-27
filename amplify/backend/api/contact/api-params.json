@@ -18,8 +18,8 @@
   "privacy": {
     "auth": 0,
     "unauth": 0,
-    "authRoleName": "amplify-portfolio-dev-121917-authRole",
-    "unAuthRoleName": "amplify-portfolio-dev-121917-unauthRole"
+    "authRoleName": "amplify-portfolio-master-201201-authRole",
+    "unAuthRoleName": "amplify-portfolio-master-201201-unauthRole"
   },
   "dependsOn": [
     {

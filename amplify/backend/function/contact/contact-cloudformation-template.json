@@ -64,8 +64,8 @@
         "Runtime": "nodejs12.x",
         "Timeout": "25",
         "Code": {
-          "S3Bucket": "amplify-portfolio-dev-121917-deployment",
-          "S3Key": "amplify-builds/contact-476c666b4b754d584163-build.zip"
+          "S3Bucket": "amplify-portfolio-master-201201-deployment",
+          "S3Key": "amplify-builds/contact-6b6d7373623750366470-build.zip"
         }
       }
     },
@@ -75,12 +75,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "portfolioLambdaRole58d7132c",
+            "portfolioLambdaRole2809a32c",
             {
               "Fn::Join": [
                 "",
                 [
-                  "portfolioLambdaRole58d7132c",
+                  "portfolioLambdaRole2809a32c",
                   "-",
                   {
                     "Ref": "env"
