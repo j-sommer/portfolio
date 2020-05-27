@@ -6,9 +6,16 @@ or in the "license" file accompanying this file. This file is distributed on an 
 See the License for the specific language governing permissions and limitations under the License.
 */
 
+/* Amplify Params - DO NOT EDIT
+	ENV
+	REGION
+Amplify Params - DO NOT EDIT */
+
 var express = require("express");
 var bodyParser = require("body-parser");
 var awsServerlessExpressMiddleware = require("aws-serverless-express/middleware");
+
+const nodemailer = require("nodemailer");
 
 // declare a new express app
 var app = express();
@@ -25,67 +32,40 @@ app.use(function (req, res, next) {
   next();
 });
 
-/**********************
- * Example get method *
- **********************/
+app.post("/contact", async function (req, res) {
+  const user = process.env.USER;
+  const pass = process.env.PASS;
 
-app.get("/contact", function (req, res) {
-  // Add your code here
-  res.json({ success: "get call succeed!", url: req.url });
-});
+  let transporter = nodemailer.createTransport({
+    host: "smtp.office365.com",
+    port: 587,
+    secure: false,
+    auth: {
+      user,
+      pass,
+    },
+    tls: { ciphers: "SSLv3" },
+  });
 
-app.get("/contact/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "get call succeed!", url: req.url });
-});
+  const { name, email, message } = req.body;
+  try {
+    let info = await transporter.sendMail({
+      from: user,
+      to: user,
+      subject: `[Contact Request] ${name} <${email}>`,
+      text: `Message:\n${message}`,
+    });
 
-/****************************
- * Example post method *
- ****************************/
+    console.log("Message sent: %s", info.messageId);
 
-app.post("/contact", function (req, res) {
-  // Add your code here
-  res.json({ success: "post call succeed!", url: req.url, body: req.body });
-});
-
-app.post("/contact/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "post call succeed!", url: req.url, body: req.body });
-});
-
-/****************************
- * Example put method *
- ****************************/
-
-app.put("/contact", function (req, res) {
-  // Add your code here
-  res.json({ success: "put call succeed!", url: req.url, body: req.body });
-});
-
-app.put("/contact/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "put call succeed!", url: req.url, body: req.body });
-});
-
-/****************************
- * Example delete method *
- ****************************/
-
-app.delete("/contact", function (req, res) {
-  // Add your code here
-  res.json({ success: "delete call succeed!", url: req.url });
-});
-
-app.delete("/contact/*", function (req, res) {
-  // Add your code here
-  res.json({ success: "delete call succeed!", url: req.url });
+    res.json({ success: "post call succeed!", url: req.url, body: req.body });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(3000, function () {
   console.log("App started");
 });
 
-// Export the app object. When executing the application local this does nothing. However,
-// to port it to AWS Lambda we will create a wrapper around that will load the app from
-// this file
 module.exports = app;
