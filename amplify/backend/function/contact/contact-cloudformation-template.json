@@ -65,7 +65,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-portfolio-master-201201-deployment",
-          "S3Key": "amplify-builds/contact-6a6168724f7369333166-build.zip"
+          "S3Key": "amplify-builds/contact-6b6d7373623750366470-build.zip"
         }
       }
     },
