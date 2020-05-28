@@ -15,7 +15,7 @@ import { MenuDesktopComponent } from "./components/header/menus/desktop/menu-des
 import { MenuMobileComponent } from "./components/header/menus/mobile/menu-mobile.component";
 import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.component";
 import { PrivacyStatementComponent } from "./components/privacy-statement/privacy-statement.component";
-import { ScrollService } from "./services/scroll.service";
+import { ScrollService } from "./services/scroll-service/scroll.service";
 
 @NgModule({
   declarations: [
