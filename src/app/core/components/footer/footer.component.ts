@@ -13,8 +13,6 @@ import { PrivacyStatementComponent } from "../privacy-statement/privacy-statemen
   styleUrls: ["./footer.component.scss"],
 })
 export class FooterComponent {
-  public readonly ColorType = ColorType;
-
   constructor(
     private scrollService: ScrollService,
     private dialog: MatDialog
