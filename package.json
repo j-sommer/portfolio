@@ -29,6 +29,7 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "aos": "^2.3.4",
+    "aws-amplify": "^3.0.13",
     "devicon": "^2.2.0",
     "ng-mocks": "^9.2.0",
     "ngx-stickybits": "^8.0.0",
