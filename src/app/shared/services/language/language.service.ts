@@ -9,7 +9,7 @@ export class LanguageService {
   constructor(private translate: TranslateService) {}
 
   public setDefaultLanguage(): void {
-    if (window.navigator.language.slice(0, 2) === SupportedLanguage.German) {
+    if (this.getCurrentLanguageCode() === SupportedLanguage.German) {
       this.translate.setDefaultLang(SupportedLanguage.German);
     } else {
       this.translate.setDefaultLang(SupportedLanguage.English);
@@ -18,5 +18,9 @@ export class LanguageService {
 
   public setLanguage(languageCode: SupportedLanguage): void {
     this.translate.use(languageCode);
+  }
+
+  private getCurrentLanguageCode(): string {
+    return window.navigator.language.slice(0, 2);
   }
 }

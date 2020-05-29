@@ -1,4 +1,4 @@
-import { ScrollService } from "core/services/scroll.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 import { SupportedLanguage } from "shared/models/enums/supported-language.enum";
 import { LanguageService } from "shared/services/language/language.service";

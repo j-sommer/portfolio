@@ -1,7 +1,7 @@
 import { Component, Input, ViewChild } from "@angular/core";
 import { MatToolbar } from "@angular/material/toolbar";
-import { ResolutionService } from "core/services/resolution.service";
-import { ScrollService } from "core/services/scroll.service";
+import { ResolutionService } from "core/services/resolution-service/resolution.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 
 @Component({

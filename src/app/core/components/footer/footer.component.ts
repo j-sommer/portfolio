@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { MatDialog } from "@angular/material/dialog";
-import { ScrollService } from "core/services/scroll.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
+import { ColorType } from "shared/models/enums/color-type.enum";
 import { Section } from "shared/models/enums/section.enum";
 
 import { LegalNoticeComponent } from "../legal-notice/legal-notice.component";

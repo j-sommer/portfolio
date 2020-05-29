@@ -4,7 +4,7 @@ import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
 import { By } from "@angular/platform-browser";
 import { TranslateModule } from "@ngx-translate/core";
-import { ScrollService } from "core/services/scroll.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 
 import { FooterComponent } from "./footer.component";
