@@ -5,6 +5,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { ServiceWorkerModule } from "@angular/service-worker";
 import { TranslateLoader, TranslateModule } from "@ngx-translate/core";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+import { AmplifyAngularModule, AmplifyService } from "aws-amplify-angular";
 import { ResolutionService } from "core/services/resolution.service";
 import { ScrollService } from "core/services/scroll.service";
 import { StickybitsModule } from "ngx-stickybits";
@@ -41,8 +42,9 @@ import { RoutingModule } from "./routing/routing.module";
     ServiceWorkerModule.register("ngsw-worker.js", {
       enabled: environment.production,
     }),
+    AmplifyAngularModule,
   ],
-  providers: [ScrollService, ResolutionService],
+  providers: [ScrollService, ResolutionService, AmplifyService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
