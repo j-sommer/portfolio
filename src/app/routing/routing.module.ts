@@ -3,11 +3,9 @@ import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 
 import { routes } from "./routes";
-import { routerOptions } from "./models/route-options";
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule, RouterModule.forRoot(routes, routerOptions)],
+  imports: [CommonModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class RoutingModule {}
