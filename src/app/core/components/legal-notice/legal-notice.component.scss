@@ -1,10 +1,18 @@
 .legal-notice {
-  &__information {
-    display: flex;
-    flex-direction: column;
+  position: relative;
+  &__close {
+    position: fixed;
+    right: 2vw;
+    top: 0;
+  }
+  &__content {
+    &__information {
+      display: flex;
+      flex-direction: column;
 
-    &__group {
-      margin-bottom: 2vh;
+      &__group {
+        margin-bottom: 2vh;
+      }
     }
   }
 }
