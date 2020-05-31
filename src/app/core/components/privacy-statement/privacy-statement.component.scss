@@ -1,0 +1,8 @@
+.privacy_statement {
+  position: relative;
+  &__close {
+    position: fixed;
+    right: 2vw;
+    top: 0;
+  }
+}
