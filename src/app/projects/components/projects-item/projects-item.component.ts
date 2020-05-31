@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ResolutionService } from "core/services/resolution.service";
+import { ResolutionService } from "core/services/resolution-service/resolution.service";
 
 @Component({
   selector: "app-projects-item",

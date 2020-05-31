@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { MatButtonModule } from "@angular/material/button";
 import { MatCardModule } from "@angular/material/card";
 import { MatGridListModule } from "@angular/material/grid-list";
+import { MatIconModule } from "@angular/material/icon";
 import { MockModule } from "ng-mocks";
 
 import { LegalNoticeComponent } from "./legal-notice.component";
@@ -12,7 +14,12 @@ describe("LegalNoticeComponent", () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [LegalNoticeComponent],
-      imports: [MockModule(MatCardModule), MockModule(MatGridListModule)],
+      imports: [
+        MockModule(MatCardModule),
+        MockModule(MatGridListModule),
+        MatButtonModule,
+        MatIconModule,
+      ],
     }).compileComponents();
   }));
 

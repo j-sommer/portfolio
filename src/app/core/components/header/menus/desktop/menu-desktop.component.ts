@@ -1,5 +1,5 @@
 import { Component, Input } from "@angular/core";
-import { ScrollService } from "core/services/scroll.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
 import { Section } from "shared/models/enums/section.enum";
 import { LanguageService } from "shared/services/language/language.service";
 

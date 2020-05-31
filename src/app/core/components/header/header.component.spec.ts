@@ -6,8 +6,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { By } from "@angular/platform-browser";
 import { RouterTestingModule } from "@angular/router/testing";
 import { TranslateModule } from "@ngx-translate/core";
-import { ResolutionService } from "core/services/resolution.service";
-import { ScrollService } from "core/services/scroll.service";
+import { ResolutionService } from "core/services/resolution-service/resolution.service";
+import { ScrollService } from "core/services/scroll-service/scroll.service";
 import { MockComponents, MockModule } from "ng-mocks";
 
 import { HeaderComponent } from "./header.component";

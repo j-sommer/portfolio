@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.1.4",
     "@angular/router": "~9.1.4",
     "@angular/service-worker": "~9.1.4",
+    "@aws-amplify/api": "^3.1.12",
     "@fortawesome/angular-fontawesome": "^0.6.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-brands-svg-icons": "^5.12.1",
@@ -29,6 +30,8 @@
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
     "aos": "^2.3.4",
+    "aws-amplify": "^3.0.13",
+    "aws-amplify-angular": "^5.0.13",
     "devicon": "^2.2.0",
     "ng-mocks": "^9.2.0",
     "ngx-stickybits": "^8.0.0",
