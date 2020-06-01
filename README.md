@@ -1,20 +1,13 @@
 ![Build And Test](https://github.com/j-sommer/portfolio/workflows/Build%20And%20Test/badge.svg)
+
 # Portfolio
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
+My personal portfolio website.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project uses [Angular 9](https://angular.io/) as its frontend framework and an [AWS Lambda Function](https://aws.amazon.com/de/lambda/) as an API. The AWS Lambda Function and the whole Continous Deployment was set up via [AWS Amplify](https://aws.amazon.com/de/amplify/).
 
-## Code scaffolding
+## Testing
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+The frontend uses [Jest](https://jestjs.io/) for the unit testing and [Testcafè](https://devexpress.github.io/testcafe/) for the e2e testing.
