@@ -34,7 +34,7 @@ jobs:
           AWS_REGION: eu-west-1
       - name: Install Dependencies
         run: npm ci
-      - name: Run Build
-        run: npm run build
+      - name: Run Prod Build
+        run: npm run build:prod
       - name: Run Unit Tests
         run: npm run test
