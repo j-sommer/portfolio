@@ -1,10 +1,7 @@
 @import "~@angular/material/theming";
+@import "./variables.scss";
+@import "./screen-sizes.scss";
 @include mat-core();
-
-$portfolio-primary: mat-palette($mat-blue, 700);
-$portfolio-accent: mat-palette($mat-deep-orange, A200, A100, A400);
-
-$portfolio-warn: mat-palette($mat-red);
 
 $portfolio-theme: mat-dark-theme(
   $portfolio-primary,
@@ -31,35 +28,6 @@ $custom-typography: mat-typography-config(
 
 @include angular-material-theme($portfolio-theme);
 @include angular-material-typography($custom-typography);
-
-$screen-sm-min: 576px;
-$screen-md-min: 768px;
-$screen-lg-min: 992px;
-$screen-xl-min: 1200px;
-
-@mixin sm {
-  @media (min-width: #{$screen-sm-min}) {
-    @content;
-  }
-}
-
-@mixin md {
-  @media (min-width: #{$screen-md-min}) {
-    @content;
-  }
-}
-
-@mixin lg {
-  @media (min-width: #{$screen-lg-min}) {
-    @content;
-  }
-}
-
-@mixin xl {
-  @media (min-width: #{$screen-xl-min}) {
-    @content;
-  }
-}
 
 body {
   margin: 0;
