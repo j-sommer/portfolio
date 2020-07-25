@@ -31,6 +31,9 @@
               "./src/theme.scss",
               "./node_modules/devicon/devicon.css"
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": ["./src/styles"]
+            },
             "scripts": []
           },
           "configurations": {
