@@ -74,12 +74,10 @@
           "placeholder": "Here you can enter your question"
         },
         "submit": {
-          "submit": {
-            "button": "Send",
-            "processing": "...",
-            "success": "Thanks!",
-            "error": "Error"
-          }
+          "button": "Send",
+          "processing": "...",
+          "success": "Thanks!",
+          "error": "Error"
         }
       }
     },
