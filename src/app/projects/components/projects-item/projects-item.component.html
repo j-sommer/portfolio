@@ -13,11 +13,14 @@
     </mat-card-header>
 
     <div>
-      <img
-        mat-card-image
-        [src]="imagePath"
-        alt="Screenshot of Portfolio Website"
-      />
+      <picture>
+        <source [srcset]="imagePath + '.webp'" type="image/webp" />
+        <img
+          mat-card-image
+          alt="Screenshot of Portfolio Website"
+          [src]="imagePath + '.jpg'"
+        />
+      </picture>
     </div>
     <mat-card-content>
       <p>
