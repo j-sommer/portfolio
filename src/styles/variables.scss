@@ -1,6 +1,73 @@
 @import "~@angular/material/theming";
 
-$portfolio-primary: mat-palette($mat-blue, 700);
-$portfolio-accent: mat-palette($mat-deep-orange, A200, A100, A400);
+$primary: (
+  50: #e5f6f9,
+  100: #bfe9ef,
+  200: #95dbe5,
+  300: #6acdda,
+  400: #4ac2d2,
+  500: #2ab7ca,
+  600: #25b0c5,
+  700: #1fa7bd,
+  800: #199fb7,
+  900: #0f90ab,
+  A100: #daf8ff,
+  A200: #a7eeff,
+  A400: #74e5ff,
+  A700: #5ae0ff,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+$accent: (
+  50: #fffaed,
+  100: #fff3d1,
+  200: #ffebb3,
+  300: #fee394,
+  400: #fedd7d,
+  500: #fed766,
+  600: #fed35e,
+  700: #fecd53,
+  800: #fec749,
+  900: #fdbe38,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fff4df,
+  A700: #ffecc6,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000,
+  ),
+);
+
+$portfolio-background-color: #fcfcfc;
+
+$portfolio-primary: mat-palette($primary, 500, 300, 700);
+$portfolio-accent: mat-palette($accent, 500, 300, 700);
 
 $portfolio-warn: mat-palette($mat-red);

@@ -3,10 +3,24 @@
 @import "./screen-sizes.scss";
 @include mat-core();
 
-$portfolio-theme: mat-dark-theme(
+$portfolio-theme: mat-light-theme(
   $portfolio-primary,
   $portfolio-accent,
   $portfolio-warn
+);
+
+$background: map-get($portfolio-theme, background);
+$background: map_merge(
+  $background,
+  (
+    background: $portfolio-background-color,
+  )
+);
+$portfolio-theme: map_merge(
+  $portfolio-theme,
+  (
+    background: $background,
+  )
 );
 
 $custom-typography: mat-typography-config(
