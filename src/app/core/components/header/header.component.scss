@@ -1,9 +1,8 @@
 @import "variables";
 
 .toolbar {
-  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-  transition-timing-function: linear;
   background-color: $portfolio-background-color;
+  padding: 0 3vw;
 
   &__header {
     width: 26px;
