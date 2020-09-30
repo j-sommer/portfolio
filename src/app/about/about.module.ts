@@ -8,10 +8,12 @@ import {
 } from "@fortawesome/angular-fontawesome";
 import {
   faAngular,
+  faAws,
   faCss3,
   faHtml5,
   faJava,
   faJs,
+  faNpm,
   faUnity,
 } from "@fortawesome/free-brands-svg-icons";
 import { TranslateModule } from "@ngx-translate/core";
@@ -41,6 +43,15 @@ import { SectionComponent } from "./components/section/section.component";
 })
 export class AboutModule {
   constructor(library: FaIconLibrary) {
-    library.addIcons(faJava, faJs, faAngular, faHtml5, faUnity, faCss3);
+    library.addIcons(
+      faJava,
+      faJs,
+      faAngular,
+      faHtml5,
+      faUnity,
+      faCss3,
+      faAws,
+      faNpm
+    );
   }
 }

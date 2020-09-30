@@ -17,5 +17,14 @@
     "text": "Photoshop",
     "icon": "photoshop",
     "isDevIcon": true
+  },
+  {
+    "text": "GitHub",
+    "icon": "github",
+    "isDevIcon": true
+  },
+  {
+    "text": "AWS",
+    "icon": "aws"
   }
 ]
