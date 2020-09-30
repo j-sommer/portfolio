@@ -16,5 +16,10 @@
   {
     "text": "Java",
     "icon": "java"
+  },
+  {
+    "text": "Python",
+    "icon": "python",
+    "isDevIcon": true
   }
 ]

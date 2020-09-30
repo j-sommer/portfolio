@@ -1,6 +1,10 @@
 [
   { "text": "HTML", "icon": "html5" },
   {
+    "text": "Javascript",
+    "icon": "js"
+  },
+  {
     "text": "CSS",
     "icon": "css3"
   },
@@ -8,5 +12,9 @@
     "text": "SASS",
     "icon": "sass",
     "isDevIcon": true
+  },
+  {
+    "text": "npm",
+    "icon": "npm"
   }
 ]
