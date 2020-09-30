@@ -4,7 +4,7 @@ $transition-duration: 200ms;
 
 .projects-item {
   max-width: 80vw;
-  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
   overflow: hidden;
 
   @include md {
