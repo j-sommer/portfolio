@@ -16,6 +16,7 @@ import {
   faGithub,
   faLinkedin,
   faMedium,
+  faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { TranslateModule } from "@ngx-translate/core";
 
@@ -53,5 +54,6 @@ export class ContactModule {
     library.addIcons(faGithub);
     library.addIcons(faLinkedin);
     library.addIcons(faCodepen);
+    library.addIcons(faTwitter);
   }
 }
