@@ -40,11 +40,10 @@
       margin-right: auto;
       margin-bottom: 2vh;
       max-width: 70vw;
-      border-radius: 5%;
       flex-basis: 30%;
       height: auto;
       width: auto;
-      box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+      box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3);
 
       @include md {
         max-width: 30vw;

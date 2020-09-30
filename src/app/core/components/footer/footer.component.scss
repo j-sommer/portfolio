@@ -6,12 +6,15 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 1vh;
+  color: $portfolio-background-color;
 
   &__to-top-button {
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-50%);
+    color: mat-color($portfolio-primary);
+    background-color: $portfolio-background-color;
   }
 
   &__copyright {

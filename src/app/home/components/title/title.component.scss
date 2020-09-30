@@ -3,6 +3,10 @@
 
 .home {
   text-align: center;
+  background-image: url("/assets/images/home/title-background.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
 
   &__panel {
     width: 100vw;
@@ -16,14 +20,8 @@
 
     &__title {
       font-weight: 900;
-      color: transparent;
+      color: $portfolio-background-color;
       font-size: 4.5em;
-      background: url("/assets/images/home/title-background.webp");
-      background-size: cover;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-background-clip: text;
-      background-position: 40% 100%;
       position: relative;
       text-align: center;
       line-height: 65px;
