@@ -4,7 +4,7 @@
   </p>
   <div class="follow-me__provider">
     <mat-grid-list
-      cols="4"
+      cols="5"
       rowHeight="1:1"
       [gutterSize]="'10px'"
       style="flex-grow: 1;"
@@ -56,6 +56,18 @@
           data-aos="fade-up"
           data-aos-duration="500"
           data-aos-delay="300"
+        ></app-contact-square>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <app-contact-square
+          [targetUrl]="'https://twitter.com/_jsommer'"
+          [contactProvider]="ContactProvider.Twitter"
+          matTooltip="twitter.com"
+          [matTooltipShowDelay]="tooltipDelayInMs"
+          [matTooltipPosition]="tooltipPosition"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-delay="400"
         ></app-contact-square>
       </mat-grid-tile>
     </mat-grid-list>

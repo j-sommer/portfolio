@@ -3,4 +3,5 @@ export enum ContactProvider {
   LinkedIn = "linkedin",
   CodePen = "codepen",
   Medium = "medium",
+  Twitter = "twitter",
 }
