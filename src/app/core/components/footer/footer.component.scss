@@ -15,6 +15,10 @@
     transform: translateY(-50%);
     color: mat-color($portfolio-primary);
     background-color: $portfolio-background-color;
+
+    &__icon {
+      transform: rotate(90deg);
+    }
   }
 
   &__copyright {
