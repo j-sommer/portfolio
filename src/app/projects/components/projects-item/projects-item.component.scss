@@ -6,16 +6,25 @@ $transition-duration: 200ms;
   max-width: 80vw;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
   overflow: hidden;
+  margin-bottom: 2vh;
 
   @include md {
-    max-width: 30vw;
+    max-width: 24vw;
   }
 
   &__content {
     transition: all ease-in $transition-duration;
 
+    @include md {
+      min-height: 18vh;
+    }
+
     &.hover {
       filter: blur(1px) saturate(0);
+    }
+
+    &__icon {
+      font-size: large;
     }
   }
 
