@@ -8,7 +8,11 @@
 >
   <div class="projects-item__content" [ngClass]="{ hover: isHovering }">
     <mat-card-header class="projects-item__header">
-      <mat-icon mat-card-avatar class="projects_item__content__icon">
+      <mat-icon
+        color="primary"
+        mat-card-avatar
+        class="projects_item__content__icon"
+      >
         {{ icon }}
       </mat-icon>
       <mat-card-title>{{ title }}</mat-card-title>
