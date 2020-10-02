@@ -3,17 +3,14 @@
     <mat-icon class="footer__to-top-button__icon">first_page</mat-icon>
   </button>
 
-  <div class="footer__legal">
+  <div class="footer__copyright">
     <a mat-button (click)="openLegalNotice()">{{
       "core.footer.legal-notice" | translate
     }}</a>
+    <mat-icon class="footer__copyright__icon">copyright</mat-icon
+    ><span class="mat-small">2020, Jan Sommer</span>
     <a mat-button (click)="openPrivacyStatement()">{{
       "core.footer.privacy-statement" | translate
     }}</a>
-  </div>
-
-  <div class="footer__copyright">
-    <mat-icon class="footer__copyright__icon">copyright</mat-icon
-    ><span class="mat-small">2020, Jan Sommer</span>
   </div>
 </div>
