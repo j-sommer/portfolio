@@ -8,20 +8,12 @@
 >
   <div class="projects-item__content" [ngClass]="{ hover: isHovering }">
     <mat-card-header class="projects-item__header">
+      <mat-icon mat-card-avatar class="projects_item__content__icon">
+        {{ icon }}
+      </mat-icon>
       <mat-card-title>{{ title }}</mat-card-title>
       <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
     </mat-card-header>
-
-    <div>
-      <picture>
-        <source [srcset]="imagePath + '.webp'" type="image/webp" />
-        <img
-          mat-card-image
-          alt="Screenshot of Portfolio Website"
-          [src]="imagePath + '.jpg'"
-        />
-      </picture>
-    </div>
     <mat-card-content>
       <p>
         {{ description }}

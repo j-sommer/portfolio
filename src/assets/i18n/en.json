@@ -51,6 +51,16 @@
       "title": "Portfolio",
       "sub-title": "Website",
       "description": "You can find the code - which this website is based on - on GitHub."
+    },
+    "article-components": {
+      "title": "Vanilla Web Components",
+      "sub-title": "Medium Story",
+      "description": "Article about web components without any framework"
+    },
+    "component-starter": {
+      "title": "Web Component Starter",
+      "sub-title": "Template Repository",
+      "description": "Repository for accelerating your web component development"
     }
   },
   "contact": {
