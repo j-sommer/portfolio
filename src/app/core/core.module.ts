@@ -14,6 +14,7 @@ import { HeaderComponent } from "./components/header/header.component";
 import { MenuDesktopComponent } from "./components/header/menus/desktop/menu-desktop.component";
 import { MenuMobileComponent } from "./components/header/menus/mobile/menu-mobile.component";
 import { LegalNoticeComponent } from "./components/legal-notice/legal-notice.component";
+import { LogoComponent } from "./components/logo/logo.component";
 import { PrivacyStatementComponent } from "./components/privacy-statement/privacy-statement.component";
 import { ScrollService } from "./services/scroll-service/scroll.service";
 
@@ -25,6 +26,7 @@ import { ScrollService } from "./services/scroll-service/scroll.service";
     MenuDesktopComponent,
     FooterComponent,
     PrivacyStatementComponent,
+    LogoComponent,
   ],
   imports: [
     CommonModule,
