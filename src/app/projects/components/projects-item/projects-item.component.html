@@ -8,29 +8,29 @@
 >
   <div class="projects-item__content" [ngClass]="{ hover: isHovering }">
     <mat-card-header class="projects-item__header">
+      <mat-icon
+        color="primary"
+        mat-card-avatar
+        class="projects_item__content__icon"
+      >
+        {{ icon }}
+      </mat-icon>
       <mat-card-title>{{ title }}</mat-card-title>
       <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
     </mat-card-header>
-
-    <div>
-      <picture>
-        <source [srcset]="imagePath + '.webp'" type="image/webp" />
-        <img
-          mat-card-image
-          alt="Screenshot of Portfolio Website"
-          [src]="imagePath + '.jpg'"
-        />
-      </picture>
-    </div>
     <mat-card-content>
-      <p>
+      <p class="projects-item__content__description">
         {{ description }}
       </p>
 
       <mat-chip-list>
-        <mat-chip *ngFor="let tag of tags" color="primary" selected>{{
-          tag
-        }}</mat-chip>
+        <mat-chip
+          class="projects-item__content__tags"
+          *ngFor="let tag of tags"
+          color="primary"
+          selected
+          >{{ tag }}</mat-chip
+        >
       </mat-chip-list>
     </mat-card-content>
   </div>
@@ -40,7 +40,12 @@
     class="projects-item__overlay"
     [ngClass]="{ hover: isHovering }"
   >
-    <a mat-raised-button color="primary" [href]="link">
+    <a
+      mat-raised-button
+      class="projects-item__overlay__button"
+      color="primary"
+      [href]="link"
+    >
       <mat-icon>link</mat-icon>
       {{ "projects.visit" | translate }}
     </a>

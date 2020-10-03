@@ -1,10 +1,32 @@
 <h1>{{ "projects.header" | translate }}</h1>
 
-<app-projects-item
-  [title]="'projects.portfolio.title' | translate"
-  [subTitle]="'projects.portfolio.sub-title' | translate"
-  [description]="'projects.portfolio.description' | translate"
-  [imagePath]="'/assets/images/projects/portfolio'"
-  [tags]="['Angular', 'Typescript']"
-  [link]="'https://github.com/j-sommer/portfolio'"
-></app-projects-item>
+<div class="projects">
+  <app-projects-item
+    [title]="'projects.portfolio.title' | translate"
+    [subTitle]="'projects.portfolio.sub-title' | translate"
+    [description]="'projects.portfolio.description' | translate"
+    [icon]="'web'"
+    [tags]="['Angular', 'Typescript']"
+    [link]="'https://github.com/j-sommer/portfolio'"
+  ></app-projects-item>
+
+  <app-projects-item
+    [title]="'projects.article-components.title' | translate"
+    [subTitle]="'projects.article-components.sub-title' | translate"
+    [description]="'projects.article-components.description' | translate"
+    [icon]="'article'"
+    [tags]="['Javascript', 'Web Development']"
+    [link]="
+      'https://levelup.gitconnected.com/vanilla-web-components-caa1bd83ed86'
+    "
+  ></app-projects-item>
+
+  <app-projects-item
+    [title]="'projects.component-starter.title' | translate"
+    [subTitle]="'projects.component-starter.sub-title' | translate"
+    [description]="'projects.component-starter.description' | translate"
+    [icon]="'code'"
+    [tags]="['Javascript', 'Web Components', 'HTML']"
+    [link]="'https://github.com/j-sommer/web-component-starter'"
+  ></app-projects-item>
+</div>

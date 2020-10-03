@@ -49,7 +49,17 @@
     "portfolio": {
       "title": "Portfolio",
       "sub-title": "Webseite",
-      "description": "Du kannst den Code, der hinter dieser Webseite steckt, auf GitHub finden"
+      "description": "Diese Webseite liegt als Open Source Code auf GitHub"
+    },
+    "article-components": {
+      "title": "Vanilla Web Components",
+      "sub-title": "Medium Story",
+      "description": "Artikel über Web Components ohne begleitendes Framework"
+    },
+    "component-starter": {
+      "title": "Web Component Starter",
+      "sub-title": "Template Repository",
+      "description": "Repository zum einfachen Erstellen von Web Components"
     }
   },
   "contact": {
