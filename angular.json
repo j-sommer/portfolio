@@ -34,7 +34,7 @@
             "stylePreprocessorOptions": {
               "includePaths": ["./src/styles"]
             },
-            "scripts": []
+            "scripts": ["src/vendor/modernizr-webp.js"]
           },
           "configurations": {
             "production": {
