@@ -29,3 +29,11 @@
     }
   }
 }
+
+html.webp .home {
+  background-image: url("/assets/images/home/title-background.webp");
+}
+
+html.no-webp .home {
+  background-image: url("/assets/images/home/title-background.jpg");
+}
