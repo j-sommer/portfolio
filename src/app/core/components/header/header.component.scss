@@ -1,3 +1,4 @@
+@import "screen-sizes";
 @import "variables";
 
 .toolbar {
@@ -5,11 +6,16 @@
   padding: 0 3vw;
 
   &__header {
-    width: 28px;
-    height: 28px;
+    width: 25px;
+    height: 25px;
     padding: 2px;
     margin-right: 2vw !important;
     cursor: pointer;
+
+    @include md {
+      width: 28px;
+      height: 28px;
+    }
 
     :focus {
       outline: none;
