@@ -55,7 +55,12 @@
     *ngIf="(currentSize$ | async).isMobileResolution"
     class="projects-item__actions"
   >
-    <a mat-raised-button color="primary" [href]="link">
+    <a
+      class="projects-item__actions__button"
+      mat-raised-button
+      color="primary"
+      [href]="link"
+    >
       <mat-icon>link</mat-icon>
       {{ "projects.visit" | translate }}
     </a>
