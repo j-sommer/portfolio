@@ -74,5 +74,9 @@ $transition-duration: 200ms;
   &__actions {
     display: flex;
     justify-content: flex-end;
+
+    &__button {
+      color: $portfolio-background-color;
+    }
   }
 }
