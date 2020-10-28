@@ -1,24 +1,32 @@
 <div class="home">
   <div class="home__panel">
-    <div class="home__panel__title">
-      Jan Sommer
+    <div class="home__panel__border"></div>
+
+    <div
+      data-aos="fade-right"
+      data-aos-duration="500"
+      class="home__panel__heading"
+    >
+      <div class="home__panel__heading__title">
+        Jan Sommer
+      </div>
+      <h2 class="home__panel__heading__subtitle">
+        <div class="home__panel__heading__subtitle__item">
+          {{ "home.title.sub-title.software-developer" | translate
+          }}<mat-icon class="home__panel__heading__subtitle__item__divider">{{
+            dividerIcon
+          }}</mat-icon>
+        </div>
+        <div class="home__panel__heading__subtitle__item">
+          {{ "home.title.sub-title.full-stack-developer" | translate
+          }}<mat-icon class="home__panel__heading__subtitle__item__divider">{{
+            dividerIcon
+          }}</mat-icon>
+        </div>
+        <div class="home__panel__heading__subtitle__item">
+          {{ "home.title.sub-title.vr-enthusiast" | translate }}
+        </div>
+      </h2>
     </div>
-    <h2 class="home__panel__subtitle">
-      <div class="home__panel__subtitle__item">
-        {{ "home.title.sub-title.software-developer" | translate
-        }}<mat-icon class="home__panel__subtitle__item__divider">{{
-          dividerIcon
-        }}</mat-icon>
-      </div>
-      <div class="home__panel__subtitle__item">
-        {{ "home.title.sub-title.full-stack-developer" | translate
-        }}<mat-icon class="home__panel__subtitle__item__divider">{{
-          dividerIcon
-        }}</mat-icon>
-      </div>
-      <div class="home__panel__subtitle__item">
-        {{ "home.title.sub-title.vr-enthusiast" | translate }}
-      </div>
-    </h2>
   </div>
 </div>

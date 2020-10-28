@@ -1,11 +1,12 @@
 <div class="menu-desktop">
-  <button
+  <a
     *ngFor="let section of sectionSet"
     mat-button
+    class="menu-desktop__link"
     (click)="scrollTo(section)"
   >
     {{ "core.header.menu-entries." + section | translate }}
-  </button>
+  </a>
 
   <mat-icon
     class="menu-desktop__language-selection"
