@@ -1,3 +1,7 @@
+@import "variables";
+
+$animate: all 0.2s ease-in-out;
+
 :host {
   width: 100%;
 }
@@ -6,6 +10,41 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  &__link {
+    transition: $animate;
+    background-color: transparent !important;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10%;
+      width: 0px;
+      height: 2px;
+      transition: $animate;
+      transition-duration: 0.5s;
+      opacity: 0;
+      background-color: mat-color($portfolio-primary);
+    }
+
+    &:before {
+      left: 50%;
+    }
+    &:after {
+      right: 50%;
+    }
+
+    &:hover {
+      background-color: transparent !important;
+      cursor: pointer;
+      &:before,
+      &:after {
+        width: 50%;
+        opacity: 1;
+      }
+    }
+  }
 
   &__language-selection {
     margin-left: auto !important;
