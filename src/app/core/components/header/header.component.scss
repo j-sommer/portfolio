@@ -2,8 +2,23 @@
 @import "variables";
 
 .toolbar {
-  background-color: $portfolio-background-color;
+  background-color: transparent;
   padding: 0 3vw;
+  height: $header-height-sm;
+  transition: background-color 0.4s;
+
+  @include md {
+    height: $header-height-md;
+  }
+
+  &.is-sticky {
+    background-color: $portfolio-background-color;
+    height: $header-height-sm;
+
+    @include md {
+      height: $header-height-md;
+    }
+  }
 
   &__header {
     width: 25px;
