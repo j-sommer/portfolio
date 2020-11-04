@@ -60,6 +60,11 @@
       "title": "Web Component Starter",
       "sub-title": "Template Repository",
       "description": "Repository zum einfachen Erstellen von Web Components"
+    },
+    "article-service-worker": {
+      "title": "Powering up Your Web Apps With Service Workers",
+      "sub-title": "Medium Story",
+      "description": "Artikel über Service Worker API"
     }
   },
   "contact": {
