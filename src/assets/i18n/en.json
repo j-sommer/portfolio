@@ -66,6 +66,11 @@
       "title": "Powering up Your Web Apps With Service Workers",
       "sub-title": "Medium Story",
       "description": "Article about Service Worker API"
+    },
+    "recipe-organizer": {
+      "title": "Recipe Organizer App",
+      "sub-title": "Mobile App",
+      "description": "Ionic app for recipe creation and organization"
     }
   },
   "contact": {
