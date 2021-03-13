@@ -1,4 +1,5 @@
 import { CommonModule } from "@angular/common";
+import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { ReactiveFormsModule } from "@angular/forms";
 import { MatButtonModule } from "@angular/material/button";
@@ -19,7 +20,6 @@ import {
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { TranslateModule } from "@ngx-translate/core";
-
 import { ContactFormComponent } from "./components/contact-form/contact-form.component";
 import { ContactSquareComponent } from "./components/contact-square/contact-square.component";
 import { FollowMeComponent } from "./components/follow-me/follow-me.component";
@@ -44,6 +44,7 @@ import { ContactService } from "./services/contact.service";
     MatGridListModule,
     MatTooltipModule,
     MatProgressBarModule,
+    HttpClientModule,
   ],
   exports: [SectionComponent],
   providers: [ContactService],
