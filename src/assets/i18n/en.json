@@ -71,6 +71,11 @@
       "title": "Recipe Organizer App",
       "sub-title": "Mobile App",
       "description": "Ionic app for recipe creation and organization"
+    },
+    "js-manufaktur": {
+      "title": "JS Manufaktur",
+      "sub-title": "Website",
+      "description": "Portfolio-Website for a small business"
     }
   },
   "contact": {
