@@ -7,8 +7,11 @@ frontend:
     build:
       commands:
         - npm run build:prod
+    postBuild:
+      commands:
+        - npm run scully
   artifacts:
-    baseDirectory: dist/portfolio
+    baseDirectory: dist/static
     files:
       - "**/*"
   cache:
