@@ -18,6 +18,7 @@ import { CoreModule } from "./core/core.module";
 import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
 import { RoutingModule } from "./routing/routing.module";
+import { ScullyLibModule } from "@scullyio/ng-lib";
 
 @NgModule({
   declarations: [AppComponent],
@@ -43,6 +44,7 @@ import { RoutingModule } from "./routing/routing.module";
       enabled: environment.production,
     }),
     AmplifyAngularModule,
+    ScullyLibModule,
   ],
   providers: [ScrollService, ResolutionService, AmplifyService],
   bootstrap: [AppComponent],

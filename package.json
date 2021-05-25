@@ -7,7 +7,9 @@
     "build": "ng build",
     "build:prod": "ng build --prod",
     "test": "ng test",
-    "lint": "ng lint"
+    "lint": "ng lint",
+    "scully": "npx scully --",
+    "scully:serve": "npx scully serve --"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +31,9 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
+    "@scullyio/init": "^1.1.4",
+    "@scullyio/ng-lib": "^1.0.0",
+    "@scullyio/scully": "^1.0.0",
     "aos": "^2.3.4",
     "aws-amplify": "^3.0.13",
     "aws-amplify-angular": "^5.0.13",
