@@ -20,3 +20,5 @@ jobs:
         run: npm run build:prod
       - name: Run Unit Tests
         run: npm run test
+      - name: Run Static Site Generator
+        run: npm run scully

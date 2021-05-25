@@ -7,8 +7,9 @@ frontend:
     build:
       commands:
         - npm run build:prod
+        - npm run scully
   artifacts:
-    baseDirectory: dist/portfolio
+    baseDirectory: dist/static
     files:
       - "**/*"
   cache:
