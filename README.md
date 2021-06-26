@@ -1,5 +1,3 @@
-![Build And Test](https://github.com/j-sommer/portfolio/workflows/Build%20And%20Test/badge.svg)
-
 # Portfolio
 
 My personal portfolio website. You can find it at: https://www.jan-sommer.dev/.
