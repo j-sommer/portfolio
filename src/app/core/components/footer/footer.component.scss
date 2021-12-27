@@ -3,7 +3,14 @@
 
 .footer {
   min-height: 15vh;
-  background-color: mat-color($portfolio-primary);
+  background: linear-gradient(
+    to top,
+    mat-color($portfolio-primary),
+    mat-color(mat-palette($primary, 700))
+  );
+  -webkit-box-shadow: inset 0px 10px 15px -7px #00000046;
+  box-shadow: inset 0px 10px 15px -7px #00000046;
+
   display: flex;
   flex-direction: column;
   padding-bottom: 1vh;

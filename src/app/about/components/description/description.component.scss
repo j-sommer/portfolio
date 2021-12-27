@@ -1,6 +1,10 @@
 @import "variables";
 @import "screen-sizes";
 
+p {
+  line-height: 1.7;
+}
+
 .description {
   display: flex;
   flex-direction: column;

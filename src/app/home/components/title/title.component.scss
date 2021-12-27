@@ -7,6 +7,8 @@
   background-attachment: fixed;
   height: 100%;
   width: 100vw;
+  -webkit-box-shadow: inset 0px -7px 15px -7px #00000046;
+  box-shadow: inset 0px -7px 15px -7px #00000046;
 
   &__panel {
     height: 40vh;
