@@ -12,6 +12,7 @@ import { Section } from "shared/models/enums/section.enum";
 export class HeaderComponent {
   public readonly sectionSet: Set<Section> = new Set([
     Section.About,
+    Section.Blog,
     Section.Projects,
     Section.Contact,
   ]);
