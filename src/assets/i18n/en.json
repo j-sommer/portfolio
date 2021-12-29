@@ -79,6 +79,9 @@
       "description": "Portfolio-Website for a small business"
     }
   },
+  "blog": {
+    "header": "Blog"
+  },
   "contact": {
     "header": "Contact",
     "contact-form": {

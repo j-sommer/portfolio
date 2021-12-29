@@ -78,6 +78,9 @@
       "description": "Portfolio-Webseite für ein Kleinunternehmen"
     }
   },
+  "blog": {
+    "header": "Blog"
+  },
   "contact": {
     "header": "Kontakt",
     "contact-form": {
