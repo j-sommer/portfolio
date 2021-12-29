@@ -3,11 +3,8 @@
 .projects {
   display: grid;
   grid-template-columns: 1fr;
-  justify-content: space-evenly;
-  align-items: stretch;
-  align-content: space-between;
 
   @include md {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }

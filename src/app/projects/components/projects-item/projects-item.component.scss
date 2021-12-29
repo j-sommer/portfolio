@@ -4,14 +4,9 @@
 $transition-duration: 200ms;
 
 .projects-item {
-  max-width: 80vw;
   box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.3) !important;
   overflow: hidden;
   margin-bottom: 2vh;
-
-  @include md {
-    max-width: 24vw;
-  }
 
   &__header {
     @include md {
@@ -28,6 +23,11 @@ $transition-duration: 200ms;
 
     &.hover {
       filter: blur(1px) saturate(0);
+    }
+
+    &__image {
+      width: 100%;
+      height: 50%;
     }
 
     &__description {
