@@ -11,7 +11,6 @@ export class ProjectsItemComponent {
   @Input() public subTitle: string;
   @Input() public icon: string;
   @Input() public description: string;
-  @Input() public tags: string[] = [];
   @Input() public link: string;
 
   public isHovering = false;
