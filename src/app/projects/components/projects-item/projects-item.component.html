@@ -1,4 +1,4 @@
-<mat-card
+<div
   class="projects-item"
   data-aos="fade-up"
   data-aos-duration="500"
@@ -7,30 +7,17 @@
   (mouseleave)="isHovering = false"
 >
   <div class="projects-item__content" [ngClass]="{ hover: isHovering }">
-    <mat-card-header class="projects-item__header">
-      <mat-icon
-        color="primary"
-        mat-card-avatar
-        class="projects-item__content__icon"
-      >
-        {{ icon }}
-      </mat-icon>
-      <mat-card-title>{{ title }}</mat-card-title>
-      <mat-card-subtitle>{{ subTitle }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-      <img class="projects-item__content__image" [src]="imageSrc" />
-      <p class="projects-item__content__description">
-        {{ description }}
-      </p>
-    </mat-card-content>
+    <img class="projects-item__content__image" [src]="imageSrc" />
   </div>
 
-  <div
-    *ngIf="!(currentSize$ | async).isMobileResolution"
-    class="projects-item__overlay"
-    [ngClass]="{ hover: isHovering }"
-  >
+  <div class="projects-item__overlay" [ngClass]="{ hover: isHovering }">
+    <span class="projects-item__overlay__title">
+      {{ title }}
+    </span>
+    <p class="projects-item__overlay__description">
+      {{ description }}
+    </p>
+
     <a
       mat-raised-button
       class="projects-item__overlay__button"
@@ -41,19 +28,4 @@
       {{ "projects.visit" | translate }}
     </a>
   </div>
-
-  <mat-card-actions
-    *ngIf="(currentSize$ | async).isMobileResolution"
-    class="projects-item__actions"
-  >
-    <a
-      class="projects-item__actions__button"
-      mat-raised-button
-      color="primary"
-      [href]="link"
-    >
-      <mat-icon>link</mat-icon>
-      {{ "projects.visit" | translate }}
-    </a>
-  </mat-card-actions>
-</mat-card>
+</div>
