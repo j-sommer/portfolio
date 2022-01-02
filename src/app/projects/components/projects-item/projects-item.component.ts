@@ -12,6 +12,7 @@ export class ProjectsItemComponent {
   @Input() public icon: string;
   @Input() public description: string;
   @Input() public link: string;
+  @Input() public imageSrc: string;
 
   public isHovering = false;
   public currentSize$ = this.resolutionService.currentSize$;
