@@ -18,7 +18,7 @@ import { ContactProvider } from "../../models/contact-provider";
       state(
         "hoverIn",
         style({
-          backgroundColor: "#E1CE7A",
+          backgroundColor: "#3f8efc",
         })
       ),
       state("hoverOut", style({})),
