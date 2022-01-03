@@ -6,7 +6,7 @@
   padding: 0 3vw;
   height: $header-height-sm;
   transition: background-color 0.4s;
-  color: $text-on-dark;
+  color: $text-on-light;
 
   @include md {
     height: $header-height-md;
