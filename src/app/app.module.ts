@@ -19,6 +19,7 @@ import { HomeModule } from "./home/home.module";
 import { ProjectsModule } from "./projects/projects.module";
 import { RoutingModule } from "./routing/routing.module";
 import { ScullyLibModule } from "@scullyio/ng-lib";
+import { BlogModule } from "./blog/blog.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -29,6 +30,7 @@ import { ScullyLibModule } from "@scullyio/ng-lib";
     AboutModule,
     ProjectsModule,
     HomeModule,
+    BlogModule,
     RoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,

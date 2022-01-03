@@ -14,6 +14,7 @@
         "about": "Über Mich",
         "projects": "Projekte",
         "contact": "Kontakt",
+        "blog": "Blog",
         "language": "Sprache"
       },
       "language-selection": {
@@ -47,7 +48,7 @@
     "header": "Projekte",
     "visit": "aufrufen",
     "portfolio": {
-      "title": "Portfolio",
+      "title": "jan-sommer.dev",
       "sub-title": "Webseite",
       "description": "Diese Webseite liegt als Open Source Code auf GitHub"
     },
@@ -72,10 +73,13 @@
       "description": "App zum Erstellen und Organisieren von Rezepten"
     },
     "js-manufaktur": {
-      "title": "JS Manufaktur",
+      "title": "js-manufaktur.de",
       "sub-title": "Webseite",
       "description": "Portfolio-Webseite für ein Kleinunternehmen"
     }
+  },
+  "blog": {
+    "header": "Blog"
   },
   "contact": {
     "header": "Kontakt",

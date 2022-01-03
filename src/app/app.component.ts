@@ -21,6 +21,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   @ViewChild("home") public homeSection: ElementRef;
   @ViewChild("about") public aboutSection: ElementRef;
   @ViewChild("projects") public projectsSection: ElementRef;
+  @ViewChild("blog") public blogSection: ElementRef;
   @ViewChild("contact") public contactSection: ElementRef;
 
   public readonly fadeInIdentifier = "fade-in";
@@ -52,6 +53,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     this.scrollService.setScrollTarget(
       Section.Projects,
       this.projectsSection.nativeElement
+    );
+    this.scrollService.setScrollTarget(
+      Section.Blog,
+      this.blogSection.nativeElement
     );
     this.scrollService.setScrollTarget(
       Section.Contact,

@@ -21,8 +21,8 @@
     margin-left: auto;
     margin-right: auto;
     transform: translateY(-50%);
-    color: mat-color($portfolio-primary);
-    background-color: $portfolio-background-color;
+    color: $text-on-dark;
+    background-color: mat-color($portfolio-accent);
 
     &__icon {
       transform: rotate(90deg);

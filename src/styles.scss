@@ -1,5 +1,9 @@
 @import "./theme.scss";
 
+* {
+  box-sizing: border-box;
+}
+
 .custom-overlay-backdrop {
   backdrop-filter: blur(4px) saturate(0);
   background-color: rgba(0, 0, 0, 0.4);

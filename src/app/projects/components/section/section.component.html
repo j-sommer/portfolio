@@ -3,58 +3,29 @@
 <div class="projects">
   <app-projects-item
     [title]="'projects.portfolio.title' | translate"
-    [subTitle]="'projects.portfolio.sub-title' | translate"
     [description]="'projects.portfolio.description' | translate"
-    [icon]="'web'"
-    [tags]="['Angular', 'Typescript']"
     [link]="'https://github.com/j-sommer/portfolio'"
-  ></app-projects-item>
-
-  <app-projects-item
-    [title]="'projects.article-components.title' | translate"
-    [subTitle]="'projects.article-components.sub-title' | translate"
-    [description]="'projects.article-components.description' | translate"
-    [icon]="'article'"
-    [tags]="['Javascript', 'Web Development']"
-    [link]="
-      'https://levelup.gitconnected.com/vanilla-web-components-caa1bd83ed86'
-    "
+    [imageSrc]="'assets/images/projects/jan-sommer.dev.png'"
   ></app-projects-item>
 
   <app-projects-item
     [title]="'projects.component-starter.title' | translate"
-    [subTitle]="'projects.component-starter.sub-title' | translate"
     [description]="'projects.component-starter.description' | translate"
-    [icon]="'code'"
-    [tags]="['Javascript', 'Web Components', 'HTML']"
     [link]="'https://github.com/j-sommer/web-component-starter'"
-  ></app-projects-item>
-
-  <app-projects-item
-    [title]="'projects.article-service-worker.title' | translate"
-    [subTitle]="'projects.article-service-worker.sub-title' | translate"
-    [description]="'projects.article-service-worker.description' | translate"
-    [icon]="'article'"
-    [tags]="['Javascript', 'Service Worker', 'Web Technology']"
-    [link]="
-      'https://jan-sommer.medium.com/powering-up-your-web-apps-with-service-workers-f5d80ac634cb'
-    "
+    [imageSrc]="'assets/images/projects/web-component-starter.png'"
   ></app-projects-item>
 
   <app-projects-item
     [title]="'projects.recipe-organizer.title' | translate"
-    [subTitle]="'projects.recipe-organizer.sub-title' | translate"
     [description]="'projects.recipe-organizer.description' | translate"
-    [icon]="'code'"
-    [tags]="['Mobile', 'Ionic', 'Angular']"
     [link]="'https://github.com/j-sommer/recipe-organizer-app'"
+    [imageSrc]="'assets/images/projects/recipe-organizer-app.png'"
   ></app-projects-item>
+
   <app-projects-item
     [title]="'projects.js-manufaktur.title' | translate"
-    [subTitle]="'projects.js-manufaktur.sub-title' | translate"
     [description]="'projects.js-manufaktur.description' | translate"
-    [icon]="'code'"
-    [tags]="['Website', 'Angular']"
     [link]="'https://www.js-manufaktur.de/landing'"
+    [imageSrc]="'assets/images/projects/js-manufaktur.png'"
   ></app-projects-item>
 </div>
