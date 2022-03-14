@@ -10,6 +10,14 @@
       "StackName": "amplify-portfolio-master-201201",
       "StackId": "arn:aws:cloudformation:eu-west-1:216357448628:stack/amplify-portfolio-master-201201/29a73310-9f8d-11ea-a73d-02dbc193ed28",
       "AmplifyAppId": "d2kjwyuh9qlq0q"
+    },
+    "categories": {
+      "function": {
+        "getPosts": {
+          "deploymentBucketName": "amplify-portfolio-master-201201-deployment",
+          "s3Key": "amplify-builds/getPosts-42526f5236536b676b6a-build.zip"
+        }
+      }
     }
   }
 }

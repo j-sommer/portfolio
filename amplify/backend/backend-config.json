@@ -1,6 +1,6 @@
 {
   "function": {
-    "contact": {
+    "getPosts": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"

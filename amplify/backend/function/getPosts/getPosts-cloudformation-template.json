@@ -1,13 +1,19 @@
 {
   "AWSTemplateFormatVersion": "2010-09-09",
-  "Description": "Lambda resource stack creation using Amplify CLI",
+  "Description": "{\"createdOn\":\"Windows\",\"createdBy\":\"Amplify\",\"createdWith\":\"7.6.23\",\"stackType\":\"function-Lambda\",\"metadata\":{}}",
   "Parameters": {
     "CloudWatchRule": {
       "Type": "String",
       "Default": "NONE",
       "Description": " Schedule Expression"
     },
+    "deploymentBucketName": {
+      "Type": "String"
+    },
     "env": {
+      "Type": "String"
+    },
+    "s3Key": {
       "Type": "String"
     }
   },
@@ -29,16 +35,24 @@
         "aws:asset:property": "Code"
       },
       "Properties": {
+        "Code": {
+          "S3Bucket": {
+            "Ref": "deploymentBucketName"
+          },
+          "S3Key": {
+            "Ref": "s3Key"
+          }
+        },
         "Handler": "index.handler",
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "contact",
+            "getPosts",
             {
               "Fn::Join": [
                 "",
                 [
-                  "contact",
+                  "getPosts",
                   "-",
                   {
                     "Ref": "env"
@@ -61,12 +75,9 @@
         "Role": {
           "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]
         },
-        "Runtime": "nodejs12.x",
-        "Timeout": "25",
-        "Code": {
-          "S3Bucket": "amplify-portfolio-master-201201-deployment",
-          "S3Key": "amplify-builds/contact-6b6d7373623750366470-build.zip"
-        }
+        "Runtime": "nodejs14.x",
+        "Layers": [],
+        "Timeout": 25
       }
     },
     "LambdaExecutionRole": {
@@ -75,12 +86,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "portfolioLambdaRole2809a32c",
+            "portfolioLambdaRole59e18e39",
             {
               "Fn::Join": [
                 "",
                 [
-                  "portfolioLambdaRole2809a32c",
+                  "portfolioLambdaRole59e18e39",
                   "-",
                   {
                     "Ref": "env"
