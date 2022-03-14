@@ -39,7 +39,6 @@
     "aws-amplify-angular": "^5.0.13",
     "devicon": "^2.2.0",
     "ng-mocks": "^10.1.3",
-    "ngx-medium-widget": "^1.0.5",
     "ngx-stickybits": "^8.0.0",
     "rxjs": "~6.6.2",
     "tslib": "^1.10.0",
