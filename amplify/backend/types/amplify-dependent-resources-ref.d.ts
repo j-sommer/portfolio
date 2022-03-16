@@ -7,4 +7,11 @@ export type AmplifyDependentResourcesAttributes = {
       LambdaExecutionRole: "string";
     };
   };
+  api: {
+    posts: {
+      RootUrl: "string";
+      ApiName: "string";
+      ApiId: "string";
+    };
+  };
 };
