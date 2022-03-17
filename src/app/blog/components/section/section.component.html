@@ -1,13 +1,12 @@
 <h1>
   {{ "blog.header" | translate }}
 </h1>
-
-<ngx-medium-widget
-  resource="https://medium.com/@jan-sommer"
-  postsLimit="4"
-  postsPerLine="2"
-  pictureSize="big"
-  [postfields]="['description', 'publishAt']"
-  postRatio="landscape"
->
-</ngx-medium-widget>
+<div class="blog-section__posts">
+  <div class="blog-section__posts__item" *ngFor="let post of posts | async">
+    <h2 class="blog-section__posts__item__title">{{ post.title }}</h2>
+    <div
+      class="blog-section__posts__item__content"
+      [innerHtml]="post.description"
+    ></div>
+  </div>
+</div>
