@@ -1,3 +1,12 @@
 <h1>
   {{ "blog.header" | translate }}
 </h1>
+<div class="blog-section__posts">
+  <div class="blog-section__posts__item" *ngFor="let post of posts | async">
+    <h2 class="blog-section__posts__item__title">{{ post.title }}</h2>
+    <div
+      class="blog-section__posts__item__content"
+      [innerHtml]="post.description"
+    ></div>
+  </div>
+</div>

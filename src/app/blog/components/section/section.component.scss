@@ -1,0 +1,34 @@
+@import "screen-sizes";
+
+.blog-section {
+  &__posts {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+
+    @include md {
+      max-width: 66vw;
+      margin: auto;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 64px;
+    }
+
+    &__item {
+      height: 450px;
+      max-height: 450px;
+      min-height: 450px;
+      display: grid;
+      grid-auto-rows: 20% 80%;
+      padding: 12px;
+
+      &__title {
+        padding: 8px;
+      }
+
+      &__content {
+        display: flex;
+        height: 100%;
+      }
+    }
+  }
+}
