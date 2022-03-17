@@ -19,7 +19,7 @@
       "function": {
         "getPosts": {
           "deploymentBucketName": "amplify-portfolio-master-201201-deployment",
-          "s3Key": "amplify-builds/getPosts-536a57504853414a5663-build.zip"
+          "s3Key": "amplify-builds/getPosts-534d50446c30546e692b-build.zip"
         }
       }
     }
