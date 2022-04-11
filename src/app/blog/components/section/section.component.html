@@ -9,12 +9,9 @@
     ></div>
     <h2 class="blog-section__posts__item__title">{{ post.title }}</h2>
     <div
-      class="blog-section__posts__item__description"
-      [innerHtml]="post.descriptionElem"
+      class="blog-section__posts__item__content-preview"
+      [innerHtml]="post.contentPreview"
     ></div>
-    <div
-      class="blog-section__posts__item__link"
-      [innerHtml]="post.linkElem"
-    ></div>
+    <a class="blog-section__posts__item__link" [href]="post.link">Read More</a>
   </div>
 </div>

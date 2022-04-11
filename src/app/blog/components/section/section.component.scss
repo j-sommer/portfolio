@@ -20,7 +20,6 @@
       min-height: 450px;
       display: grid;
       grid-template-rows: 60% 10% 20% 10%;
-      border: 1px solid black;
 
       &__title {
         padding: 8px;
@@ -31,13 +30,10 @@
         height: 100%;
       }
 
-      &__description {
+      &__content-preview {
         padding: 8px;
         font-weight: lighter;
-      }
-
-      &__link {
-        padding: 8px;
+        overflow-y: hidden;
       }
 
       &__image {
