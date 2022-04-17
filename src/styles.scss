@@ -42,24 +42,9 @@ html.no-webp .home {
   background-image: url("/assets/images/home/hero.jpg");
 }
 
-.medium-feed-item {
-  height: 100%;
-  display: grid;
-  grid-template-rows: 60% 30% 10%;
-}
-
-.medium-feed-snippet {
-  margin-bottom: 32px !important;
-  font-weight: lighter;
-}
-
-.medium-feed-image {
+.blog-section__posts__item__image {
   display: flex;
   overflow: hidden;
-
-  a {
-    margin: 0;
-  }
 
   img {
     width: 100%;

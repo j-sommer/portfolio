@@ -1,8 +1,7 @@
 import { Component, OnInit } from "@angular/core";
-import { Item, MediumFeed } from "medium-stories-fetcher";
 import { Observable } from "rxjs";
-import { map } from "rxjs/operators";
 
+import { BlogItem } from "../../models/blog-item.model";
 import { BlogService } from "../../services/blog.service";
 
 @Component({
@@ -11,11 +10,11 @@ import { BlogService } from "../../services/blog.service";
   styleUrls: ["./section.component.scss"],
 })
 export class SectionComponent implements OnInit {
-  public posts: Observable<Item[]>;
+  public posts: Observable<BlogItem[]>;
 
   constructor(private blogService: BlogService) {}
 
   public ngOnInit(): void {
-    this.posts = this.blogService.getPosts().pipe(map((feed) => feed.items));
+    this.posts = this.blogService.getPosts();
   }
 }

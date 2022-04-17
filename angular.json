@@ -25,7 +25,7 @@
               "./node_modules/aos/dist/aos.css",
               "./src/styles.scss",
               "./src/theme.scss",
-              "./node_modules/devicon/devicon.css"
+              "./node_modules/devicon/devicon.min.css"
             ],
             "stylePreprocessorOptions": {
               "includePaths": ["./src/styles"]
