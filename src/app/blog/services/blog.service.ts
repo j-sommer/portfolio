@@ -18,38 +18,47 @@ export class BlogService {
   public getPosts(): Observable<BlogItem[]> {
     return this.http.get<MediumFeed>(this.apiBaseUrl).pipe(
       map((mediumFeed) => mediumFeed.items),
-      map((items) => {
-        return items.map((item) => {
+      map((stories) => {
+        return stories.map((item) => {
           const itemDOM = this.parser.parseFromString(
-            (item as any).content,
+            item.content,
             "text/html"
           );
 
-          const imageElem = itemDOM.getElementsByTagName("img").item(0)
-            .outerHTML;
+          const imageElem = itemDOM
+            .getElementsByTagName("img")
+            .item(0).outerHTML;
 
           const paragraphElements = itemDOM.getElementsByTagName("p");
-          let contentPreview;
-
-          const asArray = Array.from(paragraphElements);
-
-          if (paragraphElements.length > 2) {
-            contentPreview = asArray
-              .slice(0, 2)
-              .map((item) => item.outerHTML)
-              .join();
-          } else {
-            contentPreview = paragraphElements.item(0).outerHTML;
-          }
+          const contentPreview = this.extractContentPreview(paragraphElements);
 
           return {
             imageElem,
             title: item.title,
             link: item.link,
             contentPreview,
-          };
+          } as BlogItem;
         });
       })
     );
+  }
+
+  private extractContentPreview(
+    collection: HTMLCollectionOf<HTMLParagraphElement>
+  ): string {
+    let contentPreview;
+
+    const asArray = Array.from(collection);
+
+    if (collection.length > 2) {
+      contentPreview = asArray
+        .slice(0, 2)
+        .map((content) => content.outerHTML)
+        .join();
+    } else {
+      contentPreview = collection.item(0).outerHTML;
+    }
+
+    return contentPreview;
   }
 }
