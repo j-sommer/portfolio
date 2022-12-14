@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
-    "@scullyio/init": "^1.1.4",
+    "@scullyio/init": "^2.1.41",
     "@scullyio/ng-lib": "^1.0.0",
     "@scullyio/scully": "^1.0.0",
     "aos": "^2.3.4",
