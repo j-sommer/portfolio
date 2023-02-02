@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ngx-translate/core": "^12.1.2",
     "@ngx-translate/http-loader": "^4.0.0",
-    "@scullyio/init": "^1.1.4",
+    "@scullyio/init": "^2.1.41",
     "@scullyio/ng-lib": "^1.0.0",
     "@scullyio/scully": "^1.0.0",
     "aos": "^2.3.4",
@@ -48,7 +48,7 @@
   "devDependencies": {
     "@angular-builders/jest": "^9.0.1",
     "@angular-devkit/build-angular": "~0.901.4",
-    "@angular/cli": "~9.1.4",
+    "@angular/cli": "~15.1.4",
     "@angular/compiler-cli": "~9.1.4",
     "@angular/language-service": "~9.1.4",
     "@politie/angular-testcafe-builder": "^2.0.5",
